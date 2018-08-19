@@ -4,7 +4,7 @@ class CreateScans < ActiveRecord::Migration[5.2]
       t.references :user, foreign_key: true
       t.references :food_item, foreign_key: true
       t.string :date
-      t.string :result
+      t.boolean :result
 
       t.timestamps
     end
