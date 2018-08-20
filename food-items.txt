@@ -1,0 +1,68 @@
+### pinchas spoonaculer has checks - if somthing is vegan, gluten free, vegetarian
+
+
+
+gluten-free:
+-wheat
+-barley
+-oats?
+-rye
+-spelt
+(-kamut, -triticale)
+  ****from celiac website****
+  Gluten-Containing Grains and Their Derivatives
+
+    Wheat
+    Varieties and derivatives of wheat such as:
+        wheatberries
+        durum
+        emmer
+        semolina
+        spelt
+        farina
+        farro
+        graham
+        KAMUT® khorasan wheat
+        einkorn wheat
+    Rye
+    Barley
+    Triticale
+    Malt in various forms including: malted barley flour, malted milk or milkshakes, malt extract, malt syrup, malt flavoring, malt vinegar
+    Brewer’s Yeast
+    Wheat Starch that has not been processed to remove the presence of gluten to below 20ppm and adhere to the FDA Labeling Law*
+
+
+Read more at https://celiac.org/live-gluten-free/glutenfreediet/sources-of-gluten/#00FztrgYMDJOqM1w.99
+
+
+
+vegetarian:
+-meat: Beef, lamb, pork, veal, horse, organ meat, wild meat, etc.
+    Poultry: Chicken, turkey, goose, duck, quail, etc.
+
+vegan:
+-meat
+-fish
+-milk (&cheese)
+-eggs
+-honey
+
+from web:
+
+
+  Meat: Beef, lamb, pork, veal, horse, organ meat, wild meat, etc.
+  Poultry: Chicken, turkey, goose, duck, quail, etc.
+  Fish and seafood: All types of fish, anchovies, shrimp, squid, scallops, calamari, mussels, crab, lobster and fish sauce.
+  Dairy: Milk, yogurt, cheese, butter, cream, ice cream, etc.
+  Eggs: From chickens, quails, ostriches and fish.
+  Bee products: Honey, bee pollen, royal jelly, etc.
+
+  Certain additives: Several food additives can be derived from animal products. Examples include E120, E322, E422, E 471, E542, E631, E901 and E904.
+  Cochineal or carmine: Ground cochineal scale insects are used to make carmine, a natural dye used to give a red colour to many food products.
+  Gelatine: This thickening agent comes from the skin, bones and connective tissues of cows and pigs.
+  Isinglass: This gelatine-like substance is derived from fish bladders. It’s often used in the making of beer or wine.
+  Natural flavourings: Some of these ingredients are animal-based. One example is castoreum, a food flavouring that comes from the secretions of beavers’ anal scent glands.
+  Omega-3 fatty acids: Many products that are enriched with omega-3s are not vegan, since most omega-3s come from fish. Omega-3s derived from algae are vegan alternatives.
+  Shellac: This is a substance secreted by the female lac insect. It’s sometimes used to make a food glaze for sweets or a wax coating for fresh produce.
+  Vitamin D3: Most vitamin D3 is derived from fish oil or the lanolin found in sheep’s wool, and is often used to fortify foods like cereals. Vitamin D2 and D3 from lichen are vegan alternatives.
+  Dairy ingredients: Whey, casein and lactose are all derived from dairy.
