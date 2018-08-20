@@ -1,13 +1,7 @@
 Rails.application.routes.draw do
-  get 'scans/new'
-  get 'scans/create'
-  get 'scans/show'
-  get 'diets/new'
-  get 'diets/create'
-  get 'diets/edit'
-  get 'diets/update'
   devise_for :users
   root to: 'pages#home'
+
   resources :diets, only: [:new, :create, :edit, :update]
   resources :scans, only: [:new, :create, :show]
 

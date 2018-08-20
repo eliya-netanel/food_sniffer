@@ -7,9 +7,10 @@ class DietsController < ApplicationController
     @diet = Diet.new(diet_params)
     @diet.user = current_user
     if @diet.save
-      redirect_to scans_new_path
+      redirect_to new_scan_path
     else
-      render :new
+      redirect_to new_diet_path
+   end
   end
 
   def edit
