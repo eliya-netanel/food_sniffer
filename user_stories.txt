@@ -1,0 +1,22 @@
+as a user i can sign up
+as a user i can log in
+as a user i can choose a dietary preference
+as a user i can change your dietary preference (and save)
+as a user i can modify your dietary preference (vegan no onions, and save)
+as a user i can scan a food item
+as a user i can see the result of a food item scan
+as a user i can see the details of the resulting scan
+
+
+
+optionals
+as a user i can see the history of my scans
+as a user i can receive suggestions for alternatives to the scanned food item
+
+as a user i can share my result (facebook, whatsapp)
+
+
+
+
+
+
