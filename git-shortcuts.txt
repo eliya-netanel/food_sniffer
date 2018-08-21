@@ -1,0 +1,17 @@
+git shortcuts
+
+-git add:
+    ga .
+-git commit:
+    gcmsg "something"
+
+-to checkout:
+    gco master
+    gco -b new-branch
+
+-delete branch:
+    go to master
+    git branch -D branchname
+
+-git status:
+    gst

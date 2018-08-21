@@ -17,6 +17,11 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+#for scanner
+gem 'turbolinks', '~> 5'
+gem 'coffee-rails', '~> 4.2'
+
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
