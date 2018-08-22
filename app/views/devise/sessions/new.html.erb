@@ -13,8 +13,8 @@
                 required: false,
                 input_html: { autocomplete: "current-password" }, class:"form"%>
         </div>
-<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot password?", new_password_path(resource_name), class:"forgot" %><br />
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "No account?Sign up!", new_registration_path(resource_name), class:"sign" %><br />
 <% end -%>
         <div class="form-actions ">
           <%= f.button :submit, "Log in", class:"login" %>
@@ -27,9 +27,7 @@
 <button class="loginBtn loginBtn--facebook">
   Login with Facebook
 </button>
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "No account?Sign up!", new_registration_path(resource_name), class:"sign" %><br />
-<% end -%>
+
 </div>
 
 
