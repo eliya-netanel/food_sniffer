@@ -12,6 +12,7 @@ food_items_1 = FoodItem.create!(name:"nutella", type_of: "sweet")
 # #ingredients_
 ingredients_1 = Ingredient.create!(name:"sugar", type_of: "condiment")
 
+
 # #scans
 scan_1 = Scan.create!(date:Date.today, result: true, user_id: user_1.id, food_item_id: food_items_1.id)
 
