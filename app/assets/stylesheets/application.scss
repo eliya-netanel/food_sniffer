@@ -13,6 +13,7 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+@import "pages/show";
 
 #barcode-scanner canvas.drawingBuffer, #barcode-scanner video.drawingBuffer {
  display: none;
@@ -24,5 +25,5 @@
 }
 
 body {
-  background-image: url('/assets/BACKGROUND.jpg');
+  background-image: asset-url('BACKGROUND.jpg');
 }

@@ -17,5 +17,12 @@ class GetProductService
     result[:ingredients] = item_info["product"]["ingredients_text_en"]
     result[:labels] = item_info["product"]["labels"]
     result
+    # result = {}
+    # result << item_info["code"]
+    # result << item_info["product"]["product_name"]
+    # result[:image] = item_info["product"]["image_front_url"]
+    # result[:ingredients] = item_info["product"]["ingredients_text_en"]
+    # result[:labels] = item_info["product"]["labels"]
+    # result
   end
 end
