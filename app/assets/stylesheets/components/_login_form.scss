@@ -1,0 +1,181 @@
+.login-container{
+  height: 100vh;
+  width:100%;
+}
+.login-form{
+  .btn{
+  width:100%;
+  }
+}
+.backtosign{
+     font-size: 13px;
+    color: white;
+    display: block;
+    padding-left: 167px;
+    margin-top: 9px;
+    margin-bottom: 14px;
+    font-style:italic;
+}
+.row{
+  padding-top: 30px
+}
+.row1{
+  padding-top: 30px;
+    padding-left:11px;
+  padding-right:11px;
+
+}
+.signin{
+    width: 80%;
+  margin-left: 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin-top: 18px;
+}
+.login {
+  width: 80%;
+  margin-left: 30px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 25px;
+  margin-top: -40px;
+}
+.logo{
+  padding-top: 50px;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  min-height: 100%;
+  min-width: 100%;
+  margin:0 auto;
+}
+.form-control:focus{
+  outline:none!important;
+  border-color: none;
+  box-shadow:none;
+  }
+.form-control{
+    font-size: 15px;
+    color: white;
+    line-height: 10;
+    display: block;
+    width: 100%;
+    height: 22px;
+    background: transparent;
+    padding: 0 5px;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1.5px solid white;
+    outline:none;
+ }
+
+.sign{
+    font-size: 13px;
+    color: white;
+    display: block;
+    padding-left: 142px;
+    margin-top: 5px;
+    margin-bottom: 14px;
+    font-style:italic;
+}
+#bootstrap-overrides label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form1{
+  padding-left:27px;
+  padding-right:27px;
+}
+.container h1 {
+  overflow: hidden;
+  text-align: center;
+  font-size: 13px;
+      margin-top: 4px;
+      margin-left:26px;
+      margin-right:26px;
+      font-style:italic;
+}
+
+h1:before,
+h1:after {
+  background-color: white;
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+
+
+/* Shared */
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 38px 5px 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 1.2em;
+  font-size: 16px;
+  color: #FFF;
+  margin-left: 30px;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  padding-top: 6px;
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
