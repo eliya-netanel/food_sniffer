@@ -1,17 +1,21 @@
 class DietsController < ApplicationController
   def show
-    @diets = current_user.diet
+    @diet = current_user.diet
     @ingredients = Ingredient.all
-  end
-
+    @black_list = @diet.ingredients
+    @not_blacklisted = @ingredients - @black_list
+  # end
+end
   def new
     @diet = Diet.new
   end
 
   def create
-    @diet = Diet.new(diet_params)
-    @diet.user = current_user
-    if @diet.save
+    template_diet = Diet.find_by_name(params[:diet_name])
+    diet = Diet.new
+    diet.user = current_user
+    diet.ingredients = template_diet.ingredients
+    if diet.save
       redirect_to user_diet_path
     else
       redirect_to new_diet_path

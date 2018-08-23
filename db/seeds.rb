@@ -1,3 +1,4 @@
+Diet.destroy_all
 User.destroy_all
 FoodItem.destroy_all
 Ingredient.destroy_all
