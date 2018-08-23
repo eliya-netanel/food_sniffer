@@ -1,12 +1,10 @@
-<div class="form-actions">
-    <%= button_to :submit %>
-
-   <div class="row margin-fix">
+    <div class="row margin-fix">
       <div class= "col-xs-12 max-auto text center">
 
         <div class="prefrence-title">
           <h1>MY DIET</h1>
         </div><!--end of btn-wrapper-->
+        <%= link_to new_scan_path do %>
         <div class="btn-wrapper color-1-btn-wrapper flex-container">
           <div class="flex-item">
             <%=image_tag("vegan.png", alt: "vegan", class: "resize padding-bottom-10")%>
@@ -48,6 +46,6 @@
         </div><!--end of btn-wrapper-->
       </div><!--end of col-xs-12-->
     </div><!--end of row-->
-</div>
-
+  </div>
+<%end %>
 
