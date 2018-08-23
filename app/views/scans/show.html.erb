@@ -1,6 +1,11 @@
-<h1>Scans#show</h1>
-<p>Find me in app/views/scans/show.html.erb</p>
+<h1>Result</h1>
 
 <!-- <p>trueeeeeee</p> -->
-<%#= @scan.result %>
+<% if @scan.result.true?  %>
+  <p>you can have this prodect</p>
+<% else %>
+  <p>you can't have this prodect</p>
+<% end %>
+<!-- print V -->
+
 

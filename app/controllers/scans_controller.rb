@@ -8,13 +8,13 @@ class ScansController < ApplicationController
   def get_product
     # product_code = params[:upc]
     # product_info = GetProductService.new(product_code).call
-    diet = current_user.diet
-
+    # diet = current_user.diet
+    diet = Diet.new
     # result = diet.check_product(product_info[:ingredients])
     result = diet.check_product(["milk","water","sugar"])
 
     # render :json => {product: product_info}
-    # result = true
+    result = true
     scan = Scan.new()
     scan.user = current_user
     scan.result = result
