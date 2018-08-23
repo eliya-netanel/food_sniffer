@@ -1,4 +1,9 @@
 class DietsController < ApplicationController
+  def show
+    @diets = current_user.diet
+    @ingredients = Ingredient.all
+  end
+
   def new
     @diet = Diet.new
   end
@@ -7,7 +12,7 @@ class DietsController < ApplicationController
     @diet = Diet.new(diet_params)
     @diet.user = current_user
     if @diet.save
-      redirect_to new_scan_path
+      redirect_to user_diet_path
     else
       redirect_to new_diet_path
    end
@@ -25,6 +30,6 @@ class DietsController < ApplicationController
   private
 
   def diet_params
-    params.require(:diet).permit(:name, :user_id)
+    params.require(:diet).permit(:name, :user_id, :diet_id)
   end
 end

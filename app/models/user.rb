@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :user_name, presence: true, uniqueness: true
   has_many :scans, dependent: :destroy
+  has_one :diet, dependent: :destroy
 end

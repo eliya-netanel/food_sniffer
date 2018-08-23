@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  get :diet, to: 'diets#show', as: :user_diet
   resources :diets, only: [:new, :create, :edit, :update]
   resources :scans, only: [:new, :create, :show] do
     collection do
