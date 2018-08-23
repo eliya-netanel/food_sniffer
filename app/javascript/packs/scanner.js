@@ -82,6 +82,8 @@ function load_quagga(){
 
   }
 };
+// $(document).on('turbolinks:load', load_quagga);
+
 
 // print
 $(document).on('turbolinks:load', load_quagga);
