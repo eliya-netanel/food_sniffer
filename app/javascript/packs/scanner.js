@@ -47,7 +47,7 @@ function load_quagga(){
           $.ajax({
             type: "POST",
             //beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', token)},
-            url: '/scans',
+            url: '/scans/get_product',
             data: { upc: code }
           });
         }
@@ -82,4 +82,6 @@ function load_quagga(){
 
   }
 };
+
+// print
 $(document).on('turbolinks:load', load_quagga);
