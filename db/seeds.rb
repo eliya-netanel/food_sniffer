@@ -5,6 +5,7 @@ Scan.destroy_all
 
 #Users
 user_1 = User.create!(user_name:"Pini", first_name:"pinchas", last_name:"hodadad", email:"pinchas.hodadad@gmail.com",password:1234567)
+user_1 = User.create!(user_name:"a", first_name:"a", last_name:"hodadad", email:"a@a.com",password:1234567)
 
 #food_items
 food_items_1 = FoodItem.create!(name:"nutella", type_of: "sweet")
