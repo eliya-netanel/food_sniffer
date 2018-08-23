@@ -5,17 +5,19 @@ class ScansController < ApplicationController
     @scan = Scan.new
     # @food_item = FoodIten.new
     # @food_item.upc = params[:upc]
-    # redirect_to create_path
     # raise
   end
 
-  # def get_barcode
-  #   # @scan.barcode =
-  #   # @food_item = FoodIten.find_or_initialize_by(upc: params[:upc])
-  #   # unless @product.new.record?
-  #     # redirect_to scan_path(@food_item)
-  #   # end
-  # end
+  def get_product
+    product_code = params[:upc]
+    product_info = GetProductService.new(product_code).call
+    render :json => {product: product_info}
+    # redirect_to scans_path
+    # @food_item = FoodIten.find_or_initialize_by(upc: params[:upc])
+    # unless @food_item.new.record?
+    #   redirect_to @food_item
+    # end
+  end
 
   def create
     raise
@@ -27,5 +29,6 @@ class ScansController < ApplicationController
   end
 
   def show
+
   end
 end
