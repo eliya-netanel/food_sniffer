@@ -3,32 +3,43 @@ class ScansController < ApplicationController
   # skip_before_action :authenticate_user!#, only: [:home]
   def new
     @scan = Scan.new
-    # @food_item = FoodIten.new
-    # @food_item.upc = params[:upc]
-    # raise
   end
 
   def get_product
     product_code = params[:upc]
     product_info = GetProductService.new(product_code).call
-    render :json => {product: product_info}
-    # redirect_to scans_path
-    # @food_item = FoodIten.find_or_initialize_by(upc: params[:upc])
-    # unless @food_item.new.record?
-    #   redirect_to @food_item
-    # end
+    # diet = current_user.diet
+    diet = Diet.new
+    result = diet.check_product(product_info[:ingredients])
+    # raise
+    # result = diet.check_product(["milk","water","sugar"])
+
+    # render :json => {product: product_info}
+    # result = true
+    scan = Scan.new()
+    scan.user = current_user
+    scan.result = result
+    # raise
+    scan.save
+    redirect_to scan_path(scan)
+
+
   end
 
-  def create
-    raise
-    redirect_to root_path
-    @scan = Scan.new
-    @scan.user = current_user
-    @scan.result = call_to_api
-    @scan.save
-  end
+  # def create
+  #   raise
+  #   redirect_to root_path
+  #   @scan = Scan.new
+  #   @scan.user = current_user
+  #   @scan.result = call_to_api
+  #   @scan.save
+  # end
 
   def show
-
+    @scan = Scan.find(params[:id])
   end
+
+
+
+
 end

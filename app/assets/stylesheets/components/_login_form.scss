@@ -8,7 +8,7 @@
   }
 }
 .backtosign{
-     font-size: 13px;
+    font-size: 13px;
     color: white;
     display: block;
     padding-left: 167px;
@@ -107,26 +107,26 @@ body{
 }
 
 .form1 {
-h1:before,
-h1:after {
-  background-color: white;
-  content: "";
-  display: inline-block;
-  height: 2px;
-  position: relative;
-  vertical-align: middle;
-  width: 50%;
-}
+  h1:before,
+  h1:after {
+    background-color: white;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
 
-h1:before {
-  right: 0.5em;
-  margin-left: -50%;
-}
+  h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
 
-h1:after {
-  left: 0.5em;
-  margin-right: -50%;
-}
+  h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
 }
 
 
