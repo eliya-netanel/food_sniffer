@@ -6,15 +6,16 @@ class ScansController < ApplicationController
   end
 
   def get_product
-    # product_code = params[:upc]
-    # product_info = GetProductService.new(product_code).call
+    product_code = params[:upc]
+    product_info = GetProductService.new(product_code).call
     # diet = current_user.diet
     diet = Diet.new
-    # result = diet.check_product(product_info[:ingredients])
-    result = diet.check_product(["milk","water","sugar"])
+    result = diet.check_product(product_info[:ingredients])
+    # raise
+    # result = diet.check_product(["milk","water","sugar"])
 
     # render :json => {product: product_info}
-    result = true
+    # result = true
     scan = Scan.new()
     scan.user = current_user
     scan.result = result

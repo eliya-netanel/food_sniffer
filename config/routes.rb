@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to:  'pages#home'#new_user_session_path
 
   get :diet, to: 'diets#show', as: :user_diet
   resources :diets, only: [:new, :create, :edit, :update]
