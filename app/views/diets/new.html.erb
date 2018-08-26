@@ -1,52 +1,59 @@
-  <div class="row margin-fix">
-    <div class= "col-xs-12 max-auto text center">
-      <div class="prefrence-title">
-        <h1>MY DIET</h1>
-      </div><!--end of btn-wrapper-->
-      <%= link_to diets_path(diet_name:"Vegan"), method: :post do %>
+<div class="row margin-fix">
+  <div class= "col-xs-12 max-auto text center">
+    <div class="prefrence-title">
+      <h1>MY DIET</h1>
+    </div><!--end of prefrence title-->
+    <%= link_to diets_path(diet_name:"Vegan"), method: :post do %>
       <div class="btn-wrapper color-1-btn-wrapper flex-container">
         <div class="flex-item">
           <%=image_tag("vegan.png", alt: "vegan", class: "resize padding-bottom-10")%>
-        </div>
+        </div><!--end of flex item-->
         <div class="flex-item">
           <h2 class="font-weight-600">Vegan</h2>
           <p class="btn-margin">Products without a trace of animal or animal products.</p>
-        </div>
+        </div><!--end of flex item-->
       </div><!--end of btn-wrapper-->
-      <%end %>
-      <%= link_to user_diet_path do %>
+    <%end%>
+
+    <%= link_to diets_path(diet_name:"Vegetarian"), method: :post do %>
       <div class="btn-wrapper color-2-btn-wrapper flex-container">
         <div class="flex-item">
           <%= image_tag("vegetarian.png", alt: "vegetarian", class: "resize padding-top-6")%>
-        </div>
+        </div><!--end of flex item-->
         <div class="flex-item">
           <h2 class="font-weight-600">Vegetarian</h2>
           <p class="btn-margin">Products without a trace of meat and/or fish.</p>
-        </div>
+        </div><!-- end of flex item-->
       </div><!--end of btn-wrapper-->
-      <%end %>
-      <%= link_to user_diet_path do %>
+    <%end %>
+
+    <%= link_to diets_path(diet_name:"Gluten-Free"), method: :post do %>
       <div class="btn-wrapper color-3-btn-wrapper flex-container">
         <div class="flex-item">
           <%= image_tag("gluten.png", alt: "gluten", class: "resize padding-bottom-4")%>
-        </div>
+        </div><!-- end of flex item-->
         <div class="flex-item">
-          <h2 class="font-weight-600">Gluten-Free</h2>
+         <h2 class="font-weight-600">Gluten-Free</h2>
           <p class="btn-margin">Products without a trace of wheat.</p>
-        </div>
+        </div><!-- end of flex item-->
       </div><!--end of btn-wrapper-->
-      <%end %>
-      <%= link_to user_diet_path do %>
+    <%end%>
+
+     <%= link_to diets_path(diet_name:"Customize"), method: :post do %>
       <div class="btn-wrapper color-4-btn-wrapper flex-container">
         <div class="flex-item">
           <%= image_tag("customize.png", alt: "customize", class: "resize padding-bottom-3 ")%>
-        </div>
-        <div class="flex-item">
-          <h2 class="font-weight-600">Customize</h2>
-          <p class="btn-margin">Choose the restrictions of your choice</p>
-        </div>
-      </div><!--end of btn-wrapper-->
+        </div><!--end of flex item-->
+          <div class="flex-item">
+            <h2 class="font-weight-600">Customize</h2>
+            <p class="btn-margin">Choose the restrictions of your choice</p>
+          </div><!--end of flex item-->
+        </div><!--end of btn-wrapper-->
       <%end %>
+
+        <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                <%end %>
     </div><!--end of col-xs-12-->
   </div><!--end of row-->
 </div>
