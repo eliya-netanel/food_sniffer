@@ -2,7 +2,7 @@ class ScansController < ApplicationController
    # skip_before_action :verify_authenticity_token
   # skip_before_action :authenticate_user!#, only: [:home]
   def index
-
+    @scans = current_user.scans.order(created_at: :desc)#.where(:product_name.distinct)
   end
 
   def new
@@ -15,6 +15,7 @@ class ScansController < ApplicationController
     #sends to service the code to get info(the service is a parser)
     product_info = GetProductService.new(product_code).call
     diet   = Diet.new
+    result = check_product(product_info[:ingredients])
       #to check if the info gets to the page(in network):
         # render :json => {product: product_info}
     scan        = Scan.new()
@@ -22,8 +23,8 @@ class ScansController < ApplicationController
     #if the product exists in DB:
     if product_info
       scan.product_name = product_info[:name]
-      scan.ingredients = product_info[:ingredients]
-      result = diet.check_product(product_info[:ingredients])
+      scan.ingredients = product_info[:ingredients]#.lowercase #make sure if ok
+      # result = diet.check_product(product_info[:ingredients])
       scan.result = result
     #if doesnt exist in DB:
     else
@@ -46,7 +47,20 @@ class ScansController < ApplicationController
     @scan = Scan.find(params[:id])
   end
 
+private
 
-
+def check_product(ingredients) #if is vegetarian
+    product_ingredients = ingredients.split(",")
+    product_ingredients.map! { |ingredient| ingredient.strip! }
+    # raise
+    # result = @ingredients & product_ingredients
+    # binding.pry
+    # map/each! the array so its lowercase
+# diet.where(:user = current_user)
+    result_array = ["milk"] & product_ingredients
+    # compere both arrays, returns, result
+    # raise
+    result_array.empty?
+  end
 
 end
