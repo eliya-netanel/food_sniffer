@@ -5,19 +5,20 @@ Ingredient.destroy_all
 Scan.destroy_all
 Ingredient.destroy_all
 
-#Users
+#---Users--
 user_1 = User.create!(user_name:"Pini", first_name:"pinchas", last_name:"hodadad", email:"pinchas.hodadad@gmail.com",password:1234567)
 user_2 = User.create!(user_name:"A", first_name:"pinchas", last_name:"hodadad", email:"a@gmail.com",password:1234567)
 user_3 = User.create!(user_name:"B", first_name:"B", last_name:"hodadad", email:"b@b.com",password:1234567)
 
 
-#food_items
+#---food_items--
 food_items_1 = FoodItem.create!(name:"nutella", type_of: "sweet")
 
-#ingredients
+#---ingredients--
 
-#Gluten-free
+#---Gluten-free---
 glutens = [
+
 Ingredient.create!(name:"wheat"),
 Ingredient.create!(name:"barley"),
 Ingredient.create!(name:"oats"),
@@ -44,8 +45,9 @@ Ingredient.create!(name:"malt vinegar"),
 Ingredient.create!(name:"brewes Yeast"),
 Ingredient.create!(name:"Wheat starch"),
 ]
-#Vegetarian
+#---Vegetarian---
 vegetarians = [
+
 Ingredient.create!(name:"meat"),
 Ingredient.create!(name:"beef"),
 Ingredient.create!(name:"lamb"),
@@ -62,22 +64,9 @@ Ingredient.create!(name:"duck"),
 Ingredient.create!(name:"quail"),
 ]
 
-#Vegan
+#---Vegan---
 vegans = [
-Ingredient.create!(name:"meat"),
-Ingredient.create!(name:"beef"),
-Ingredient.create!(name:"lamb"),
-Ingredient.create!(name:"pork"),
-Ingredient.create!(name:"veal"),
-Ingredient.create!(name:"horse"),
-Ingredient.create!(name:"organ meat"),
-Ingredient.create!(name:"wild meat"),
-Ingredient.create!(name:"poultry"),
-Ingredient.create!(name:"chicken"),
-Ingredient.create!(name:"turkey"),
-Ingredient.create!(name:"goose"),
-Ingredient.create!(name:"duck"),
-Ingredient.create!(name:"quail"),
+
 Ingredient.create!(name:"fish"),
 Ingredient.create!(name:"anchovies"),
 Ingredient.create!(name:"shrimp"),
@@ -126,16 +115,22 @@ Ingredient.create!(name:"casein"),
 Ingredient.create!(name:"lactose"),
 ]
 
-#Scans
+#Other
+other = [
+Ingredient.create!(name:"sugar"),
+Ingredient.create!(name:"salt"),
+Ingredient.create!(name:"cinnammon"),
+Ingredient.create!(name:"peanut"),
+]
+
+#----Scans---
 
 scan_1 = Scan.create!(date:Date.today, result: true, user_id: user_1.id, food_item_id: food_items_1.id)
 
-#Diet
-
-#User
-# diet_1 = Diet.create!(name:"My diet", user_id: user_1.id)
+#----Diet----
 
 #Gluten-free
+
 diet_gluten = Diet.create!(name:"Gluten-Free")
 glutens.each do |gluten|
   diet_gluten.ingredients << gluten
@@ -151,8 +146,19 @@ end
 diet_vegetarian.save!
 
 #Vegan
-diet_vegan = Diet.create!(name:"Vegan")
-vegans.each do |vegan|
-  diet_vegan.ingredients << vegan
+
+diet_vegans = vegans + vegetarians
+diet_vegan_new = Diet.create!(name:"Vegan")
+diet_vegans.each do |vegan|
+  diet_vegan_new.ingredients << vegan
 end
-diet_vegan.save!
+diet_vegan_new.save!
+
+#Customize
+# all_diets = glutens + vegetarians + vegans + customize
+diet_customize = Diet.create!(name:"My Diet")
+# all_diets.each do |ingredient|
+#   diet_customize.ingredients << ingredient
+# end
+# diet_customize.save!
+
