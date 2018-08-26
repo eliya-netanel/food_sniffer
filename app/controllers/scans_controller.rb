@@ -16,12 +16,11 @@ class ScansController < ApplicationController
     # render :json => {product: product_info}
     scan        = Scan.new()
     scan.user   = current_user
+    scan.product_name = product_info[:name]
     scan.ingredients = product_info[:ingredients]
     scan.result = result
     scan.save
     redirect_to scan_path(scan)
-
-
   end
 
   # def create

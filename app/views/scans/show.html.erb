@@ -1,7 +1,10 @@
-<% if @scan.result == true  %>
+<% if @scan.result == nil %>
+  <h1>The product is not in the database as of now</h1>
+<% elsif @scan.result == true  %>
   <h1 class="text-center result-page-result">You can eat!</h1>
   <!-- this product fits you dietery needs -->
-  <% p @scan.ingredients %>
+  <%= @scan.product_name %>
+  <%= @scan.ingredients %>
   <!-- <div style="background-image: url(<%= image_path 'true.jpg' %>)"></div> -->
   <div style="background-image: url('https://kitt.lewagon.com/placeholder/cities/berlin');"></div>
 <% else %>

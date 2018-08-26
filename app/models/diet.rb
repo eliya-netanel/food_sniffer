@@ -13,8 +13,8 @@ class Diet < ApplicationRecord
     # result = @ingredients & product_ingredients
 
     # map/each! the array so its lowercase
-
-    result_array = diet.where(:user = current_user) & product_ingredients
+# diet.where(:user = current_user)
+    result_array = ["milk"] & product_ingredients
     # compere both arrays, returns, result
     return true if result_array.empty?
   end
