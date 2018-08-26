@@ -1,7 +1,7 @@
 <% if @scan.result == true  %>
   <h1 class="text-center result-page-result">You can eat!</h1>
   <!-- this product fits you dietery needs -->
-
+  <% p @scan.ingredients %>
   <!-- <div style="background-image: url(<%= image_path 'true.jpg' %>)"></div> -->
   <div style="background-image: url('https://kitt.lewagon.com/placeholder/cities/berlin');"></div>
 <% else %>
@@ -12,3 +12,6 @@
     <%= link_to 'Scan again', new_scan_path, class:"btn btn-primary", style:"text-center" %>
   </div>
 
+<!-- nill
+true
+false -->
