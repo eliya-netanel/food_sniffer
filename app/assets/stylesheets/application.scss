@@ -13,3 +13,17 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+@import "pages/show";
+
+#barcode-scanner canvas.drawingBuffer, #barcode-scanner video.drawingBuffer {
+ display: none;
+}
+
+#barcode-scanner canvas, #barcode-scanner video {
+ width: 100%;
+ height: auto;
+}
+
+body {
+  background-image: asset-url('BACKGROUND.jpg');
+}

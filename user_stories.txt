@@ -1,0 +1,43 @@
+landing page
+  #pages/home
+
+as a user i can sign up
+  #device route
+
+as a user i can log in
+  #device route
+
+as a user i can choose a dietary preference
+  #diets/new
+  #diets/create
+    #### @diet.user_id = current_user
+
+as a user i can modify your dietary preference (vegan no onions, and save)
+  #diets/:diet_id/edit
+  #diets/:diet_id/update
+
+as a user i can scan a food item
+  #scans/new
+  #scans     (action create)
+
+as a user i can see the result of a food item scan
+  #scans/:id /////(action show)
+
+as a user i can see the details of the resulting scan
+  #scans/:id /////(action show)
+
+
+
+optionals
+as a user i can see the history of my scans
+  #scans/index
+
+as a user i can receive suggestions for alternatives to the scanned food item
+
+as a user i can share my result (facebook, whatsapp)
+
+
+
+
+
+
