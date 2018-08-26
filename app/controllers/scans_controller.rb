@@ -1,6 +1,10 @@
 class ScansController < ApplicationController
    # skip_before_action :verify_authenticity_token
   # skip_before_action :authenticate_user!#, only: [:home]
+  def index
+
+  end
+
   def new
     @scan = Scan.new
   end
