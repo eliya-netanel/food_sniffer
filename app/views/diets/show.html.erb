@@ -1,7 +1,13 @@
-<ul>
-<% @black_list.each do |ingredient| %>
-<li>
-<%= ingredient.name %>
-</li>
-<%end%>
-</ul>
+<div class= "flex-container">
+
+  <% @black_list.each do |ingredient| %>
+  <div class = "flex-item-ingredients-list">
+  <%= ingredient.name %>
+  </div>
+  <%end%>
+</div>
+--------------------------------------------------------------------------------
+  <% @not_blacklisted.each do |ingredient| %>
+  <%= ingredient.name %>
+  <%end%>
+
