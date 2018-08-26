@@ -6,21 +6,27 @@ class ScansController < ApplicationController
   end
 
   def get_product
+    #gets code from js
     product_code = params[:upc]
+    #sends to service the code to get info(the service is a parser)
     product_info = GetProductService.new(product_code).call
-    # diet = current_user.diet
     diet   = Diet.new
-    result = diet.check_product(product_info[:ingredients])
-    # raise
-
-    # render :json => {product: product_info}
+      #to check if the info gets to the page(in network):
+        # render :json => {product: product_info}
     scan        = Scan.new()
     scan.user   = current_user
-    scan.product_name = product_info[:name]
-    scan.ingredients = product_info[:ingredients]
-    scan.result = result
-    scan.save
-    redirect_to scan_path(scan)
+    #if the product exists in DB:
+    if product_info
+      scan.product_name = product_info[:name]
+      scan.ingredients = product_info[:ingredients]
+      result = diet.check_product(product_info[:ingredients])
+      scan.result = result
+    #if doesnt exist in DB:
+    else
+      scan.result = nil
+    end
+      scan.save
+      redirect_to scan_path(scan)
   end
 
   # def create
