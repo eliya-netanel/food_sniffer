@@ -14,6 +14,7 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/show";
+@import "scans/index";
 
 #barcode-scanner canvas.drawingBuffer, #barcode-scanner video.drawingBuffer {
  display: none;
@@ -24,9 +25,7 @@
  height: auto;
 }
 
-body {
-  background-image: asset-url('BACKGROUND.jpg');
-}
+
 
 a:hover {
   text-decoration: none;
