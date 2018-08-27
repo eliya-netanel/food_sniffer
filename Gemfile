@@ -6,6 +6,9 @@ gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
+# added 'omniauth-facebook' for facebook authentication
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'rails', '5.2.1'
 gem 'redis'
 
