@@ -1,24 +1,50 @@
-<%#  raise%>
+
+  <div class= "col-xs-12 max-auto text center">
+    <div class="prefrence-title">
+      <h1>RESULTS</h1>
+    </div>
+
 <% if @scan.result == nil %>
-<!-- <h1>aaaaaaaaaaaaaaaa</h1> -->
-  <h1>The product is not in the database as of now</h1>
-  <%= @scan.product_code %>
-  <%= link_to 'Add to database', edit_scan_path(@scan)  %>
-<% elsif @scan.result == true  %>
-  <h1 class="text-center result-page-result">You can eat!</h1>
-  <!-- this product fits you dietery needs -->
-  <%= @scan.product_name %>
-  <%= @scan.ingredients %>
-  <!-- <div style="background-image: url(<%= image_path 'true.jpg' %>)"></div> -->
-  <div style="background-image: url('https://kitt.lewagon.com/placeholder/cities/berlin');"></div>
-<% else %>
-  <h1 class="text-center result-page-result">You can't eat!</h1>
-<% end %>
-  <!-- </div style=“background-image: url(<%#= assets_path false.jpg’ %>)“> -->
-  <div class="return-btn text-center">
-    <%= link_to 'Scan again', new_scan_path, class:"btn btn-primary", style:"text-center" %>
+<%= image_tag "unknown.jpg",class: "image1" %>
+<div class="card part2">
+  <div class="container">
+    <h3><b>Name of the thing</b></h2>
+    <h2>Ingredients</h3>
+    <p>kerker</p>
   </div>
 
-<!-- nill
-true
-false -->
+<% elsif @scan.result == true  %>
+<%= image_tag "true.jpg",class: "image1" %>
+<div class="card part2">
+  <div class="container">
+    <h3><b><%= @scan.product_name %></b></h2>
+    <h2>Ingredients</h3>
+ <ul>
+<%= @scan.ingredients.split(",").each do |ingredient|%>
+    <li>
+      <%= ingredient %>
+    </li>
+    <% end %>
+  </ul>
+
+  <!-- <div style="background-image: url(<%= image_path 'true.jpg' %>)"></div> -->
+<% else %>
+<%= image_tag "false.jpg",class: "image1" %>
+<div class="card part2">
+  <div class="container">
+    <h3><b>@scan.product_name</b></h2>
+    <h2>Ingredients</h3>
+ <ul>
+<%= @scan.ingredients.split(",").each do |ingredient|%>
+    <li>
+      <%= ingredient %>
+    </li>
+    <% end %>
+  </ul>
+
+<% end %>
+
+ <div class="return-btn text-center">
+    <%= link_to '', new_scan_path, class:"button", style:"text-center" %>
+  </div>
+</div>
