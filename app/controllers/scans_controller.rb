@@ -20,6 +20,9 @@ class ScansController < ApplicationController
         # render :json => {product: product_info}
     scan        = Scan.new()
     scan.user   = current_user
+
+    #scan.code = product_code /// maybe create a new column
+
     #if the product exists in DB:
     if product_info
       scan.product_name = product_info[:name]
