@@ -15,7 +15,7 @@ class ScansController < ApplicationController
     #sends to service the code to get info(the service is a parser)
     product_info = GetProductService.new(product_code).call
     diet   = Diet.new
-    result = check_product(product_info[:ingredients])
+    # result = check_product(product_info[:ingredients])
       #to check if the info gets to the page(in network):
         # render :json => {product: product_info}
     scan        = Scan.new()
@@ -27,7 +27,7 @@ class ScansController < ApplicationController
     if product_info
       scan.product_name = product_info[:name]
       scan.ingredients = product_info[:ingredients]#.lowercase #make sure if ok
-      # result = diet.check_product(product_info[:ingredients])
+      result = check_product(product_info[:ingredients])
       scan.result = result
     #if doesnt exist in DB:
     else
@@ -50,6 +50,14 @@ class ScansController < ApplicationController
     @scan = Scan.find(params[:id])
   end
 
+  def edit
+    # form for
+    @scan = Scan.find(params[:id])
+  end
+
+  def update
+
+  end
 private
 
 def check_product(ingredients) #if is vegetarian
