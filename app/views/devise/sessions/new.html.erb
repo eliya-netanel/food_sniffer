@@ -22,10 +22,7 @@
       <% end %>
       </div>
       <h1>Or connect with</h1>
-<button class="loginBtn loginBtn--facebook">
-  Login with Facebook
-</button>
-
+      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: "loginBtn loginBtn--facebook"%>
     </div>
   </div>
 

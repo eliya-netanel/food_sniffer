@@ -14,3 +14,10 @@ yarn-error.log
 .byebug_history
 .env*
 .env*
+
+
+# Ignore application configuration
+# This line is needed or all of our secret API keys
+# will be available to GitHub
+# which would be sub optimal!
+/config/application.yml
