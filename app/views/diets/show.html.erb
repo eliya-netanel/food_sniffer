@@ -1,13 +1,62 @@
-<div class= "flex-containerss">
-
-  <% @black_list.each do |ingredient| %>
-  <div class = "flex-item-ingredients-list">
-  <%= ingredient.name %>
-  </div>
+<div class="row margin-fix">
+  <div class= "col-xs-12 max-auto text center">
+    <div class="title-show">
+      <h1>Ingredient Categories</h1>
+    </div> <!-- end of prefrence-title-->
+      <% @black_list_by_category.each do |category, ingredients| %>
+       <a class="decoration-show" a href="#" onclick="showIngredients('<%= category.parameterize %>');return false">
+        <div class="ingredient-categories-button flex-container-show">
+      <!-- Iterating over all the categories.
+      1)a href = Creating a link to the categories
+      2) onClick = Calling a function(see below) when you click on it.
+      3)category = the category you click
+      4)return false: we are disabling the link -->
+          <div class="flex-item">
+            <%= image_tag("#{category.parameterize}.png", alt: "#{category.parameterize}", class: "icon-show padding-left")%>
+          </div><!--end of flex item-->
+          <div class="flex-item white-color decoration-show">
+            <%= category.capitalize %>
+          </div><!-- end of flex item-->
+          <div class="flex-item padding-right">
+            <i class="fas fa-chevron-right padding-right white-color"></i>
+          </div><!--end flex-item-->
+        </div><!--iend ingredient button-->
+       </a>
+        <div class="wrapper-list">
+          <ul class="ingredients-<%= category.parameterize %> collapsed">
+            <% ingredients.each do |ingredient| %>
+             <li><%= ingredient.name %>
+            </li>
+            <% end %>
+          </ul>
+        </div><!-- end of wrapper-list-->
+      <%end%>
+  </div><!-- end of col-->
+</div><!-- end of row-->
+<div class="flex-container-show-buttons">
+  <%= link_to new_diet_path, class:"link" do %>
+  <p>Back</p>
+  <div class="flex-item button-show">
+  </div><!-- end flex-item-->
   <%end%>
-</div>
---------------------------------------------------------------------------------
-  <% @not_blacklisted.each do |ingredient| %>
-  <%= ingredient.name %>
+  <%= link_to new_scan_path, class:"link" do %>
+  <div class="flex-item button-show">
+    <p>Scan Now</p>
+  </div><!-- end flex-item-->
   <%end%>
+</div><!--end flex-container-->
 
+<!-- This is how you write javascript in erb. Better not to. But you can. -->
+<script>
+
+function showIngredients(category) {
+  // element = is the argument which is the a link
+  // parentElement = is the parent element of the a href which is the div
+  // classList = you are getting access to the class of ul
+  // toggle = if hidden exsits then delete it. If it doesnt exsit then add it
+  // We have it so it will delete it
+  document.querySelector(`ul.ingredients-${category}`).classList.toggle("collapsed")
+  // element.parentElement.querySelector("ul.ingredients").classList.toggle("collapsed")
+}
+
+</script>
