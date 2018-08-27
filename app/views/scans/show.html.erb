@@ -1,36 +1,64 @@
 <div class="row margin-fix">
   <div class= "col-xs-12 max-auto text center">
     <div class="prefrence-title">
-      <h1>MY DIET</h1>
+      <h1>RESULTS</h1>
     </div>
-<% if @scan.result == true  %>
-  <h1 class="text-center result-page-result">You can eat!</h1>
-  <!-- this product fits you dietery needs -->
 
-  <!-- <div style="background-image: url(<%= image_path 'true.jpg' %>)"></div> -->
-<% else %>
-<%= image_tag "false.jpg",class: "image1" %>
-<div class="card part2">
-  <div class="container">
-    <h3><b>@scan.product_name</b></h2>
-    <h2>Ingredients</h3>
- <ul>
-<%= @scan.ingredients.split(",").each do |ingredient|%>
-    <li>
-      <%= ingredient %>
-    </li>
+
+    <% if @scan.result  %>
+      <!-- <h1 class="text-center result-page-result">You can eat!</h1> -->
+      <!-- this product fits you dietery needs -->
+      <%= image_tag "true.jpg",class: "image1" %>
+      <div class="card part2">
+        <div class="container">
+          <h3><b><%= @scan.product_name %></b></h3>
+          <h2>Ingredients</h2>
+          <ul>
+            <%= @scan.ingredients.split(",").each do |ingredient|%>
+              <li>
+                <%= ingredient %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <!-- <div style="background-image: url(<%= image_path 'true.jpg' %>)"></div> -->
+    <% elsif @scan.result.nil? %>
+      <%= image_tag "unknown.jpg",class: "image1" %>
+      <div class="card part2">
+        <div class="container">
+          <h3><b>Name of the thing</b></h3>
+          <h2>Ingredients</h2>
+          <p>kerker</p>
+        </div>
+      </div>
+
+    <% else %>
+      <%= image_tag "false.jpg",class: "image1" %>
+      <div class="card part2">
+        <div class="container">
+          <h3><b>@scan.product_name</b></h3>
+          <h2>Ingredients</h2>
+          <ul>
+            <%= @scan.ingredients.split(",").each do |ingredient|%>
+              <li>
+                <%= ingredient %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
     <% end %>
-  </ul>
 
-<% end %>
-  <!-- </div style=“background-image: url(<%#= assets_path false.jpg’ %>)“> -->
-  <div class="return-btn text-center">
-    <%= link_to 'Scan again', new_scan_path, class:"btn btn-primary", style:"text-center" %>
+
+
+    <!-- <div class="return-btn text-center">
+      <%#= link_to 'Scan again', new_scan_path, class:"btn btn-primary", style:"text-center" %>
+    </div> -->
   </div>
 </div>
-</div>
 
- <div class="return-btn text-center">
+<div class="return-btn text-center">
     <%= link_to '', new_scan_path, class:"button", style:"text-center" %>
-  </div>
 </div>
+
