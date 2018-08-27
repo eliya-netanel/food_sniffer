@@ -1,3 +1,4 @@
+# require 'pr'
 class Diet < ApplicationRecord
   # belongs_to :user,
   # has_many :ingredients
@@ -7,6 +8,10 @@ class Diet < ApplicationRecord
   has_many :ingredients, through: :diet_ingredients, dependent: :destroy
 
 
+  def check_ingredients(other_ingredients)
+    # binding.pry
+    (ingredients.map(&:name) & other_ingredients).empty?
+  end
 
 #   def check_product(ingredients) #if is vegetarian
 #     product_ingredients = ingredients.split(",")

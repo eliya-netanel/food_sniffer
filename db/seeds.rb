@@ -22,6 +22,7 @@ gluten = [
 Ingredient.create!(name:"wheat", type_of:"gluten"),
 Ingredient.create!(name:"barley", type_of:"gluten"),
 Ingredient.create!(name:"oats", type_of:"gluten"),
+Ingredient.create!(name:"oat", type_of:"gluten"),
 Ingredient.create!(name:"rye", type_of:"gluten"),
 Ingredient.create!(name:"wheat", type_of:"gluten"),
 Ingredient.create!(name:"spelt", type_of:"gluten"),
