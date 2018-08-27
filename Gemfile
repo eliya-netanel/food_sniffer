@@ -21,6 +21,7 @@ gem 'webpacker'
 gem 'turbolinks', '~> 5'
 gem 'coffee-rails', '~> 4.2'
 
+gem 'rest-client'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

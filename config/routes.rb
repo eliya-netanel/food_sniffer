@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get :diet, to: 'diets#show', as: :user_diet
   resources :diets, only: [:new, :create, :edit, :update]
-  resources :scans, only: [:index, :new, :create, :show] do
+  resources :scans, only: [:index, :new, :create, :show, :edit, :update] do
     collection do
       post :get_product
     end

@@ -1,1 +1,7 @@
-edit.html.erb
+<%# raise %>
+<%= simple_form_for @scan do |f| %>
+  <%= f.input :food_item_id, as: :hidden %>
+  <%= f.input :product_name, placeholder: 'Bamba'%>
+  <%= f.input :ingredients, placeholder: 'penuts,corn,vegetable oil,salt,vitamins' %>
+  <%= f.submit %>
+<% end %>
