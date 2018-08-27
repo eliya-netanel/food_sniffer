@@ -2,11 +2,33 @@ class DietsController < ApplicationController
   def show
     @diet = current_user.diet
 
-    #Will be the template ingredients as we established in the create action
-    @black_list = @diet.ingredients
-    @ingredients = Ingredient.all
-    #The rest of the ingredients will follow that wasn't black listed.
-    @not_blacklisted = @ingredients - @black_list
+    #getting the type_of from the ingredeints table
+    # @black_list_by_category = {}
+    # @diet.ingredients.each do |ingredient|
+    #   @black_list_by_category[ingredient.type_of] ||= []
+    #   @black_list_by_category[ingredient.type_of] << ingredient
+    # end
+
+    @black_list_by_category = @diet.ingredients.group_by {|i| i.type_of }
+    # @black_list_by_category = @diet.ingredients.group_by(&:type_of)
+
+
+    # {
+    #   "vegan": [Ingredient1, Ingredient2]
+    # }
+
+    # a ||= b
+
+    # if a.nil?
+    #   a = b
+    # end
+
+
+    # @black_list = @diet.ingredients
+    # @ingredients = Ingredient.all
+    # #The rest of the ingredients will follow that wasn't black listed.
+    # @not_blacklisted = @ingredients - @black_list
+    # @info =
 
 end
   def new

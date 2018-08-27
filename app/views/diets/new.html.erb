@@ -3,7 +3,7 @@
     <div class="prefrence-title">
       <h1>MY DIET</h1>
     </div><!--end of prefrence title-->
-    <%= link_to diets_path(diet_name:"Vegan"), class: "decoration", method: :post do %>
+    <%= link_to diets_path(diet_name:"Vegan"), method: :post do %>
       <div class="btn-wrapper color-1-btn-wrapper flex-container decoration">
         <div class="flex-item">
           <%=image_tag("vegan.png", alt: "vegan", class: "resize padding-bottom-10")%>
@@ -39,14 +39,14 @@
       </div><!--end of btn-wrapper-->
     <%end%>
 
-     <%= link_to diets_path(diet_name:"My Diet"), method: :post do %>
+     <%= link_to diets_path(diet_name:"Dairy"), method: :post do %>
       <div class="btn-wrapper color-4-btn-wrapper flex-container decoration">
         <div class="flex-item">
           <%= image_tag("customize.png", alt: "customize", class: "resize padding-bottom-3 ")%>
         </div><!--end of flex item-->
           <div class="flex-item">
-            <h2 class="font-weight-600">Customize</h2>
-            <p class="btn-margin">Choose the restrictions of your choice</p>
+            <h2 class="font-weight-600">Lactose-Intolerant</h2>
+            <p class="btn-margin">Products without a trace of dairy</p>
           </div><!--end of flex item-->
         </div><!--end of btn-wrapper-->
       <%end %>
