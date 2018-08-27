@@ -21,7 +21,7 @@ class ScansController < ApplicationController
     scan        = Scan.new()
     scan.user   = current_user
 
-    #scan.code = product_code /// maybe create a new column
+    scan.product_code = product_code #/// maybe create a new column
 
     #if the product exists in DB:
     if product_info
@@ -33,8 +33,9 @@ class ScansController < ApplicationController
     else
       scan.result = nil
     end
-      scan.save
-      redirect_to scan_path(scan)
+
+    scan.save
+    redirect_to scan_path(scan)
   end
 
   # def create
@@ -56,11 +57,20 @@ class ScansController < ApplicationController
   end
 
   def update
+    @scan = Scan.find(params[:id])
+    ingredients = params[:scan][:ingredients]
+    product_name = params[:scan][:product_name]
 
+    add_to_db_url = AddToDbService.new(
+        @scan.product_code, ingredients, product_name).call
+
+    redirect_to new_scan_path
+    # service
   end
 private
 
 def check_product(ingredients) #if is vegetarian
+  if ingredients
     product_ingredients = ingredients.split(",")
     product_ingredients.map! { |ingredient| ingredient.strip! }
     # raise
@@ -72,6 +82,10 @@ def check_product(ingredients) #if is vegetarian
     # compere both arrays, returns, result
     # raise
     result_array.empty?
+  else
+    false
   end
+  end
+
 
 end
