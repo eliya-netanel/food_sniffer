@@ -3,18 +3,168 @@
 //   font-weight: 40px;
 //   margin-bottom: 40px;
 // }
-
-
-.flex-containerss {
-    flex-wrap: wrap;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 80vh;
-    height: 60vh;
+body.diets.show {
+  height: 100vh;
+  background: #019e3a;
 }
 
-.flex-item-ingredients-list {
-  border: 1px solid #008325;
+.title-show {
+  height: 5vh;
+  width: 100vw;
+  color: white;
+  background: #326a2f;
+  color: white;
+  margin: auto 0;
+  box-shadow: inset 0 1px rgba(255,255,255, 0.5);
+  text-align: center;
+  padding: 6px;
+  h1 {
+    margin-top: 0;
+    font-size: 25px;
+  }
 }
+
+.ingredient-categories-button {
+  width: 100vw;
+  height: 8vh;
+  background: #377f2d;
+  box-shadow: inset 0 1px rgba(255,255,255, 0.5);
+  font-size: 20px;
+}
+ul.ingredients-meat.collapsed {
+  max-height: 0;
+  transition: max-height 0.30s ease-out;
+}
+ul.ingredients-meat {
+  max-height: 500px;
+  transition: max-height 0.50s ease-in;
+  overflow: hidden;
+}
+ul.ingredients-gluten.collapsed {
+  max-height: 0;
+  transition: max-height 0.30s ease-out;
+}
+ul.ingredients-gluten {
+  max-height: 500px;
+  transition: max-height 0.50s ease-in;
+  overflow: hidden;
+}
+ul.ingredients-seafood.collapsed {
+  max-height: 0;
+  transition: max-height 0.30s ease-out;
+}
+ul.ingredients-seafood {
+  max-height: 500px;
+  transition: max-height 0.50s ease-in;
+  overflow: hidden;
+}ul.ingredients-dairy.collapsed {
+  max-height: 0;
+  transition: max-height 0.30s ease-out;
+}
+ul.ingredients-dairy {
+  max-height: 500px;
+  transition: max-height 0.50s ease-in;
+  overflow: hidden;
+}ul.ingredients-artifical-coloring.collapsed {
+  max-height: 0;
+  transition: max-height 0.30s ease-out;
+}
+ul.ingredients-artifical-coloring {
+  max-height: 500px;
+  transition: max-height 0.50s ease-in;
+  overflow: hidden;
+}ul.ingredients-other-vegan-ingredients.collapsed {
+  max-height: 0;
+  transition: max-height 0.30s ease-out;
+}
+ul.ingredients-other-vegan-ingredients {
+  max-height: 500px;
+  transition: max-height 0.50s ease-in;
+  overflow: hidden;
+}
+
+.flex-container-show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a:active {
+  text-decoration: none;
+}
+
+.padding-left {
+  position: relative;
+  left: 20px;
+
+}
+
+.padding-right {
+  padding-right: 10px;
+}
+.white-color {
+  color: white;
+}
+
+.icon-show {
+  width: 45px;
+  height: 45px;
+}
+
+// .button-show {
+
+//   background-color: #326a2f;
+//   width: 123px;
+//   height: 57px;
+// }
+
+
+.flex-container-show-buttons {
+
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+
+.link {
+  text-decoration: none;
+  color: white;
+  width: 123px;
+  height: 57px;
+  background: #007335;
+  position: relative;
+  margin: 30px;
+  top: -15px;
+  padding: 16px;
+  font-size: 50px;
+  border-radius: 10px;
+  text-align: center;
+  // box-shadow: 0px 15px 0px 0px darken($pink-hot, 5%), 0px 0px 20px 0px #bbb;
+
+  transition: all 0.2s;
+  p {
+    font-size: 18px;
+
+  }
+}
+
+.link:active {
+  top: 108px;
+  // box-shadow: 0px 7px 0px 0px darken($pink-hot, 5%);
+}
+
+.button1 {
+  background-color: yellow;
+}
+
+.button2 {
+  background-color: blue;
+  // box-shadow: 0px 15px 0px 0px darken($blue-sky, 5%);
+}
+//   // &:active {
+//   //   // box-shadow: 0px 7px 0px 0px darken($blue-sky, 5%);
+//   // }
+
+
 
