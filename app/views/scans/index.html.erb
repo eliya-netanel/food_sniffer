@@ -1,0 +1,21 @@
+<div class="wrapper">
+
+  <div class="history-header">
+    <h1>HISTORY</h1>
+  </div>
+  <% @scans.each do |scan|%>
+    <%  if scan.result # && scan.product_name.distinct %>
+      <div class="scan-history-card">
+        <%#=  Math.round((Date.now() - Date.parse(scan.created_at)) / 60000) minutes ago%>
+        <%#= scan.created_at %>
+        <%= scan.product_name.capitalize %>
+        <% if scan.result %>
+          <p>V</p>
+        <%  else%>
+          <p>X</p>
+         <% end %>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>

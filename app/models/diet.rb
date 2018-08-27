@@ -6,18 +6,21 @@ class Diet < ApplicationRecord
 
   has_many :ingredients, through: :diet_ingredients, dependent: :destroy
 
- 
 
-  def check_product(ingredients) #if is vegetarian
-    product_ingredients = ingredients.split(",")
-    # result = @ingredients & product_ingredients
 
-    # map/each! the array so its lowercase
+#   def check_product(ingredients) #if is vegetarian
+#     product_ingredients = ingredients.split(",")
+#     product_ingredients.map! { |ingredient| ingredient.strip! }
+#     # raise
+#     # result = @ingredients & product_ingredients
 
-    result_array = ["milk", "cheese", "meat", "egg"] & product_ingredients
-    # compere both arrays, returns, result
-    return true if result_array.empty?
-  end
+#     # map/each! the array so its lowercase
+# # diet.where(:user = current_user)
+#     result_array = ["milk"] & product_ingredients
+#     # compere both arrays, returns, result
+#     # raise
+#     return true if result_array.empty?
+#   end
 
   private
 
