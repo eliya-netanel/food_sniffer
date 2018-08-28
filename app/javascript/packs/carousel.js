@@ -1,4 +1,4 @@
-(() => {
+const initializeCarousel = () => {
   const $slider = document.querySelector('.slider-list');
 
   const $sliderSlides = document.querySelectorAll('.slider-slide');
@@ -99,4 +99,9 @@
       $sliderRight.dispatchEvent(slideRightEvent);
     }
   }, false);
-})();
+};
+
+const $slider = document.querySelector('.slider-list');
+if ($slider) {
+  initializeCarousel()
+}
