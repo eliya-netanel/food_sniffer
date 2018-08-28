@@ -8,11 +8,18 @@
     <% if @scan.result  %>
       <!-- <h1 class="text-center result-page-result">You can eat!</h1> -->
       <!-- this product fits you dietery needs -->
-      <%= image_tag "true.jpg",class: "image1" %>
+      <div class="part3">
+      <%= image_tag "true.png",class: "icone1" %>
+        <div class="eat">
+          <h1> You can eat that!</h1>
+        </div>
+      </div>
       <div class="card part2">
         <div class="container">
-          <h3><b><%= @scan.product_name %></b></h3>
-          <h2>Ingredients</h2>
+          <h3><%= @scan.product_name %></h3>
+      <div class="ingredients-title">
+      <h6><strong> Ingredients </strong></h6>
+          </div>
           <ul>
             <%= @scan.ingredients.split(",").each do |ingredient|%>
               <li>
@@ -20,6 +27,9 @@
               </li>
             <% end %>
           </ul>
+        </div>
+                <div class="return-btn text-center">
+        <%= link_to '', new_scan_path, class:"button", style:"text-center" %>
         </div>
       </div>
       <!-- <div style="background-image: url(<%= image_path 'true.jpg' %>)"></div> -->
@@ -34,11 +44,18 @@
       </div>
 
     <% else %>
-      <%= image_tag "false.jpg",class: "image1" %>
+      <div class="part1">
+      <%= image_tag "false.png",class: "icone1" %>
+        <div class="eat">
+          <h1>You can't eat that!</h1>
+        </div>
+      </div>
       <div class="card part2">
         <div class="container">
-          <h3><b>@scan.product_name</b></h3>
-          <h2>Ingredients</h2>
+          <h3>@scan.product_name</h3>
+          <div class="ingredients-title">
+      <h6><strong> Ingredients </strong></h6>
+          </div>
           <ul>
             <%= @scan.ingredients.split(",").each do |ingredient|%>
               <li>
