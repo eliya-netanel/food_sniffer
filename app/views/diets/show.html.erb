@@ -25,8 +25,9 @@
         <div class="wrapper-list">
           <ul class="li-style ingredients-<%= category.parameterize %> collapsed">
             <% ingredients.each do |ingredient| %>
-             <li><%= ingredient.name %>
-            </li>
+            <div class="list-div">
+             <li><%= ingredient.name %></li>
+            </div>
             <% end %>
           </ul>
         </div><!-- end of wrapper-list-->
