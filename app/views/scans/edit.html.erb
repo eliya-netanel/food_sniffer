@@ -1,7 +1,21 @@
 <%# raise %>
-<%= simple_form_for @scan do |f| %>
+<%= simple_form_for @scan, remote: true do |f| %>
   <%= f.input :food_item_id, as: :hidden %>
   <%= f.input :product_name, placeholder: 'Bamba'%>
   <%= f.input :ingredients, placeholder: 'penuts,corn,vegetable oil,salt,vitamins' %>
-  <%= f.submit %>
+  <%= f.submit 'Add' %>
 <% end %>
+
+<div id="addedPopup" class="hidden">
+  <h1>Working!</h1>
+</div>
+
+<!-- on click show pop up and redirect -->
+<script>
+  document.body.addEventListener('ajax:beforeSend', function(event) {
+    var detail = event.detail;
+    // var data = detail[0], status = detail[1], xhr = detail[2];
+    console.log("beforeSend", event)
+    document.querySelector("#addedPopup").classList.remove("hidden")
+  })
+</script>
