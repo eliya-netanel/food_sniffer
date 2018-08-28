@@ -66,11 +66,11 @@ class ScansController < ApplicationController
     add_to_db_url = AddToDbService.new(
         @scan.product_code, ingredients, product_name).call
 
-    dt = time - Time.now
-    sleep(dt) unless dt < 0
+    # dt = time - Time.now
+    # sleep(dt) unless dt < 0
 
     # head :no_content
-    redirect_to new_scan_path
+    # redirect_to new_scan_path
     # service
   end
 
