@@ -67,24 +67,26 @@ class ScansController < ApplicationController
     redirect_to new_scan_path
     # service
   end
-private
 
-def check_product(ingredients) #if is vegetarian
-  if ingredients
-    product_ingredients = ingredients.split(",")
-    product_ingredients.map! { |ingredient| ingredient.strip! }
-    # raise
-    # result = @ingredients & product_ingredients
-    # binding.pry
-    # map/each! the array so its lowercase
-# diet.where(:user = current_user)
-    result_array = ["milk"] & product_ingredients
-    # compere both arrays, returns, result
-    # raise
-    result_array.empty?
-  else
-    false
-  end
+  private
+
+  def check_product(ingredients) #if is vegetarian
+    if ingredients
+      product_ingredients = ingredients.split(",")
+      product_ingredients.map! { |ingredient| ingredient.strip }
+      # raise
+      # result = @ingredients & product_ingredients
+      # binding.pry
+      # map/each! the array so its lowercase
+  # diet.where(:user = current_user)
+      result_array = current_user.diet.check_ingredients(product_ingredients)
+      # result_array = current_user.diet.ingredients & product_ingredients
+      # compere both arrays, returns, result
+      # raise
+      # result_array.empty?
+    else
+      false
+    end
   end
 
 

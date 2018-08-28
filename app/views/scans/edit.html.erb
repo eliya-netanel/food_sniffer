@@ -1,7 +1,25 @@
-<%# raise %>
-<%= simple_form_for @scan do |f| %>
-  <%= f.input :food_item_id, as: :hidden %>
-  <%= f.input :product_name, placeholder: 'Bamba'%>
-  <%= f.input :ingredients, placeholder: 'penuts,corn,vegetable oil,salt,vitamins' %>
-  <%= f.submit %>
-<% end %>
+ <div class="row margin-fix">
+  <div class= "col-xs-12 max-auto text center">
+    <div class="prefrence-title scan new-color">
+      <h1>ADD</h1>
+    </div>
+    <div class="add-title">
+      <h6><strong> ADD YOUR PRODUCT </strong></h6>
+
+    </div>
+    <div class="container-add">
+      <div class="card-form">
+        <div class="form2">
+        <%= simple_form_for @scan do |f| %>
+        <%= f.input :food_item_id, as: :hidden %>
+        <%= f.input :product_name, placeholder: 'Bamba'%>
+        <%= f.input :ingredients, placeholder: 'Peanuts, Corn, Vegetables, Oil etc...' %>
+        <input type="submit" name="commit" value="Update Scan" data-disable-with="Update Scan"class="submit">
+        <% end %>
+          <%= link_to 'Scan again', new_scan_path, class:"back", style:"text-center" %>
+        </div>
+        <%= image_tag "add.png",class: "image3" %>
+      </div>
+     </div>
+  </div>
+</div>
