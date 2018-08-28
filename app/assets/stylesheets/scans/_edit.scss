@@ -94,3 +94,18 @@ h6{
      width: 88%;
     margin-left: 20px;
 }
+
+#addedPopup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #326A2D;
+  background-color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
