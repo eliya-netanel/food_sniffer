@@ -1,5 +1,5 @@
-<div class="row margin-fix">
-  <div class= "col-xs-12 max-auto text center">
+<div class="row margin-fix margin-fixed">
+  <div class= "col-xs-12 max-auto text center <%= @diet.name.downcase %>">
     <div class="title-show">
       <h1>Ingredient Categories</h1>
     </div> <!-- end of prefrence-title-->
@@ -23,7 +23,7 @@
         </div><!--iend ingredient button-->
        </a>
         <div class="wrapper-list">
-          <ul class="ingredients-<%= category.parameterize %> collapsed">
+          <ul class="li-style ingredients-<%= category.parameterize %> collapsed">
             <% ingredients.each do |ingredient| %>
              <li><%= ingredient.name %>
             </li>
@@ -33,7 +33,7 @@
       <%end%>
   </div><!-- end of col-->
 </div><!-- end of row-->
-<div class="flex-container-show-buttons">
+<div class="flex-container-show-buttons footer">
   <%= link_to new_diet_path, class:"link" do %>
   <p>Back</p>
   <div class="flex-item button-show">

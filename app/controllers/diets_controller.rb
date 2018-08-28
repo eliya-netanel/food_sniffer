@@ -38,11 +38,8 @@ end
   def create
     #Finding the specific diet with params that we made in the html
     Diet.where(user: current_user).destroy_all
-    template_diet = Diet.find_by_name(params[:diet_name])
-    diet = Diet.new
+    diet = Diet.new_from_template(params[:diet_name])
     diet.user = current_user
-    #The set ingredients of the template will be pushed to my diet.
-    diet.ingredients = template_diet.ingredients
     if diet.save
       redirect_to user_diet_path
     else

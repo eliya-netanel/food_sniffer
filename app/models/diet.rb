@@ -3,10 +3,16 @@ class Diet < ApplicationRecord
   # has_many :ingredients
   belongs_to :user, optional: true
   has_many :diet_ingredients
-
   has_many :ingredients, through: :diet_ingredients, dependent: :destroy
 
-
+  def self.new_from_template(name)
+    template_diet = Diet.where(user_id: nil, name: name).first
+    diet = Diet.new
+    diet.name = template_diet.name
+    #The set ingredients of the template will be pushed to my diet.
+    diet.ingredients = template_diet.ingredients
+    return diet
+  end
 
 #   def check_product(ingredients) #if is vegetarian
 #     product_ingredients = ingredients.split(",")

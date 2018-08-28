@@ -4,14 +4,16 @@
 //   margin-bottom: 40px;
 // }
 body.diets.show {
-  height: 100vh;
-  background: #019e3a;
+  background: #d8e8da99;
 }
-
+.margin-fixed {
+    margin-left: 0;
+}
 .title-show {
-  height: 5vh;
+  height: 7vh;
   width: 100vw;
   color: white;
+  font-weight: bold;
   background: #326a2f;
   color: white;
   margin: auto 0;
@@ -21,16 +23,47 @@ body.diets.show {
   h1 {
     margin-top: 0;
     font-size: 25px;
+    padding-top: 10px;
   }
 }
 
-.ingredient-categories-button {
+.vegan .ingredient-categories-button {
   width: 100vw;
   height: 8vh;
   background: #377f2d;
-  box-shadow: inset 0 1px rgba(255,255,255, 0.5);
+  box-shadow: 0px 7px 0px 0px darken(#007335, 1%);
+  // box-shadow: inset 0 1px rgba(255,255,255, 0.5);
   font-size: 20px;
 }
+
+.vegetarian .ingredient-categories-button {
+  width: 100vw;
+  height: 8vh;
+  background: #76b552;
+  box-shadow: 0px 7px 0px 0px darken(#76b552, 1%);
+  // box-shadow: inset 0 1px rgba(255,255,255, 0.5);
+  font-size: 20px;
+}
+
+.gluten-free .ingredient-categories-button {
+  width: 100vw;
+  height: 8vh;
+  background: #bfdd6b;
+  box-shadow: 0px 7px 0px 0px darken(#bfdd6b, 1%);
+  // box-shadow: inset 0 1px rgba(255,255,255, 0.5);
+  font-size: 20px;
+}
+
+.dairy .ingredient-categories-button {
+  width: 100vw;
+  height: 8vh;
+  background: #2f9d7f;
+  box-shadow: 0px 7px 0px 0px darken(#2f9d7f, 1%);
+  // box-shadow: inset 0 1px rgba(255,255,255, 0.5);
+  font-size: 20px;
+}
+
+
 ul.ingredients-meat.collapsed {
   max-height: 0;
   transition: max-height 0.30s ease-out;
@@ -83,6 +116,7 @@ ul.ingredients-other-vegan-ingredients {
   overflow: hidden;
 }
 
+
 .flex-container-show {
   display: flex;
   justify-content: space-between;
@@ -94,7 +128,7 @@ a:active {
 
 .padding-left {
   position: relative;
-  left: 20px;
+  left: 27px;
 
 }
 
@@ -129,10 +163,11 @@ a:active {
 
 .link {
   text-decoration: none;
-  color: white;
+  color: #326a2f;
+  font-weight: bolder;
   width: 123px;
   height: 57px;
-  background: #007335;
+  background: white;
   position: relative;
   margin: 30px;
   top: -15px;
@@ -140,7 +175,7 @@ a:active {
   font-size: 50px;
   border-radius: 10px;
   text-align: center;
-  // box-shadow: 0px 15px 0px 0px darken($pink-hot, 5%), 0px 0px 20px 0px #bbb;
+  box-shadow: 0px 4px 0px 0px darken(#007335, 1%), 0px 0px 20px 0px #bbb;
 
   transition: all 0.2s;
   p {
@@ -150,21 +185,49 @@ a:active {
 }
 
 .link:active {
-  top: -10px;
-  // box-shadow: 0px 7px 0px 0px darken($pink-hot, 5%);
+  top: -13px;
+  box-shadow: 0px 7px 0px 0px darken(#007335, 1%);
+  background: #326a2f;
+  color: white;
 }
 
-.button1 {
-  background-color: yellow;
+.li-style {
+  color: black;
+  list-style: none;
+  // columns: 2;
+  // -webkit-columns: 2;
+  // -moz-columns: 2;
+  // padding-top: 18px;
+  //  height: 100px;
+  padding-top: 18px;
+  text-align: justify;
+
 }
 
-.button2 {
-  background-color: blue;
-  // box-shadow: 0px 15px 0px 0px darken($blue-sky, 5%);
+.vegan .li-style {
+  color: black;
+  list-style: none;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  padding-top: 18px;
+   height: 100px;
+   text-align: justify;
+
 }
-//   // &:active {
-//   //   // box-shadow: 0px 7px 0px 0px darken($blue-sky, 5%);
-//   // }
+.footer {
+ background: #d8e8da1a;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ height: 100px;
+ width: 100%;
+}
 
-
-
+//  // html {
+//  //    position: relative;
+//  //    min-height: 100%;
+// }
+// // body {
+// //     margin: 0 0 100px; /* bottom = footer height */
+// // }
