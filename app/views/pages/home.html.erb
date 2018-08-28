@@ -1,8 +1,33 @@
-<meta HTTP-EQUIV="REFRESH" content="0; url=<%=user_session_path %>">
-<!--
+<!-- <meta HTTP-EQUIV="REFRESH" content="0; url=<%=user_session_path %>">
+ --><!--
 <h1>Pages#home</h1>
 <h1>This is the loading page. You will be redirected in 4 seconds to the sign up page!</h1>
  -->
+<html>
+  <head>
+  </head>
+  <body>
 
+<!-- Slider container -->
+<div class="slider-container">
+  <!-- Slider list -->
+  <ul class="slider-list">
+    <li class="slider-slide slider-slide-active"><%=image_tag("barcode-reader", alt: "barcode-reader", class: "resize padding-bottom-10")%></li>
+    <li class="slider-slide slider-slide-hidden">Choose a diet.</li>
+    <li class="slider-slide slider-slide-hidden">Make sure you're happy.</li>
+    <li class="slider-slide slider-slide-hidden">Scan food items.</li>
+    <li class="slider-slide slider-slide-hidden">Eat!!!</li>
+  </ul><!-- .end Slider list -->
 
+  <!-- Slider controls -->
+  <div class="slider-controlls">
+    <ul class="controlls-list">
+      <li><a href="#" class="js-slider-left slider-control control-left"><i class="fa fa-caret-left"></i></a></li>
 
+      <li><a href="#" class="js-slider-right slider-control control-right"><i class="fa fa-caret-right"></i></a></li>
+    </ul>
+  </div><!-- .end Slider controls -->
+</div><!-- .end Slider container -->
+
+  </body>
+</html>
