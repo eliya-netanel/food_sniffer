@@ -60,7 +60,16 @@ body.diets.show {
   background: #2f9d7f;
   font-size: 20px;
 }
-
+ul {
+  margin:0;
+}
+.padding-fix {
+  padding-top: 15px !important;
+  padding-bottom: 15px;
+}
+.arrow-dropdown {
+  transition: all 0.3s ease;
+}
 ul.ingredients-meat.collapsed {
   max-height: 0;
   transition: max-height 0.30s ease-out;
@@ -118,6 +127,9 @@ ul.ingredients-other-vegan-ingredients {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &.arrow-dropdown-down {
+    transform: rotate(90deg);
+  }
 }
 a:active {
   text-decoration: none;
@@ -201,7 +213,7 @@ a:active {
   text-align: justify;
   list-style: none;
   padding-left: 4px;
-  padding-top: 10px;
+  padding-top: 1px;
 
 }
 .footer {

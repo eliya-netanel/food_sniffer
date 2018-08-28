@@ -18,7 +18,7 @@
             <%= category.capitalize %>
           </div><!-- end of flex item-->
           <div class="flex-item padding-right">
-            <i class="fas fa-chevron-right padding-right white-color"></i>
+            <i class="fas fa-chevron-right padding-right white-color arrow-dropdown" onclick="rotateArrow()"></i>
           </div><!--end flex-item-->
         </div><!--iend ingredient button-->
        </a>
@@ -57,7 +57,16 @@ function showIngredients(category) {
   // toggle = if hidden exsits then delete it. If it doesnt exsit then add it
   // We have it so it will delete it
   document.querySelector(`ul.ingredients-${category}`).classList.toggle("collapsed")
+  document.querySelector(`ul.ingredients-${category}`).classList.toggle("padding-fix")
   // element.parentElement.querySelector("ul.ingredients").classList.toggle("collapsed")
 }
 
 </script>
+<!-- <script>
+  function rotateArrow() {
+    const arrow = document.querySelector(".flex-continer-show");
+    arrow.classList.toggle("arrow-dropdown-down")
+    // arrow.style.transform = "rotate(90deg)";
+  }
+  // arrow.addEventListener('click', rotateArrow());
+</script> -->
