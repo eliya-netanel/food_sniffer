@@ -20,8 +20,8 @@ html {
 }
 
 body {
-  padding-top: 16px;// add some space above the slider
-  font-family: 'Montserrat', arial, sans-serif;
+// add some space above the slider
+
   font-size: 100%;
 }
 
@@ -29,40 +29,55 @@ ul {
   padding: 0;
   margin: 0;
 }
+.icone3{
+     width: 60%;
+     padding-bottom: 40px;
 
+}
 .slider-container {
   padding: remy(16px);
   margin-right: auto;
   margin-left: auto;
   max-width: remy(480px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, .15), 0 4px 16px rgba(0, 0, 0, .05);
+  height:100vh;
+  background-color:#4CAF50;
 }
 
 .slider-list {
   overflow: hidden;
-  display: flex;
+  text-align:center;
   align-items: center;
-  height: remy(250px);
+  height: 63vh;
+
 }
 
 .slider-slide img {
   max-width: 100%;
 }
-
+.resize{
+  padding-top: 2px;
+}
 .slider-slide-hidden {
   display: none;
 }
-
+.spacing{
+  height:15vh;
+  padding-top: 245px;
+}
 .slider-slide-active {
   display: block;
   animation: fadeIn .85s ease-in-out;
-  color: black;
+  color: white;
+  font-family: "Nunito";
+  font-size: 35px;
 }
 
 .slider-controlls {
-  position: relative;
+  position: fixed;
   margin-top: remy(16px);
   text-align: center;
+  bottom: 15px;
 
   /* Clearfix for floated items */
   &:before,
@@ -88,9 +103,9 @@ ul {
   }
 
   a {
-    $color: #233142;
+    $color: white;
 
-    padding: 8px 15px;
+    padding: 8px 85px;
     color: $color;
     text-decoration: none;
     transition: color .25s ease-in-out;

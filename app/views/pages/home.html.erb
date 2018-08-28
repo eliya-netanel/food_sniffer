@@ -11,13 +11,14 @@
 <!-- Slider container -->
 <div class="slider-container">
   <!-- Slider list -->
+  <div class="spacing">
   <ul class="slider-list">
-    <li class="slider-slide slider-slide-active"><%=image_tag("barcode-reader.png", alt: "barcode-reader", class: "resize padding-bottom-10")%></li>
-    <li class="slider-slide slider-slide-hidden">Choose a diet.</li>
-    <li class="slider-slide slider-slide-hidden">Make sure you're happy.</li>
-    <li class="slider-slide slider-slide-hidden">Scan food items.</li>
-    <li class="slider-slide slider-slide-hidden">Eat!!!
-    <%= link_to "Start", new_diet_path %>
+
+    <li class="slider-slide slider-slide-active">
+      <div><%=image_tag("choose.png", alt: "barcode-reader", class: "icone3")%></div>Choose a diet<p>Between vegetarian, vegan, gluten-free and lactose intolerant.</p></li>
+    <li class="slider-slide slider-slide-hidden"><div><%=image_tag("scanner.png", alt: "barcode-reader", class: "icone3")%></div>Scan an item<p>It will help us to check in the database what are the ingredient and compare them to your diet.</p></li>
+    <li class="slider-slide slider-slide-hidden"><div><%=image_tag("results.png", alt: "barcode-reader", class: "icone3")%></div>Get the results<p>You can have an clear answer if this item suits your diet or not. Now it's your turn!</p>
+    <%= link_to "Start", new_diet_path, class:"special" %>
     </li>
   </ul><!-- .end Slider list -->
 
