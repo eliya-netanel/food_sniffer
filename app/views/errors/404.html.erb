@@ -1,0 +1,7 @@
+<div class="container nil">
+  <h5><strong>We are sorry !</strong> </h5>
+  <h6>Your item is not in our database. But you can help us by adding this item to the project.</h6>
+  <%= image_tag "nil.png",class: "image2" %>
+      <%= link_to 'Add item', edit_scan_path(@scan), class:"add", style:"text-center" %>
+      <%= link_to 'Back to scanner', new_scan_path, class:"again", style:"text-center" %>
+</div>
