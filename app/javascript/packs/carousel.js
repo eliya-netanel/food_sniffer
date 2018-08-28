@@ -101,7 +101,11 @@ const initializeCarousel = () => {
   }, false);
 };
 
-const $slider = document.querySelector('.slider-list');
-if ($slider) {
-  initializeCarousel()
-}
+$(document).on("turbolinks:load", () => {
+  const $slider = document.querySelector('.slider-container');
+  if ($slider) {
+    initializeCarousel()
+  }
+});
+
+
