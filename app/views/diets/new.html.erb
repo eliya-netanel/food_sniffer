@@ -1,3 +1,4 @@
+
 <div class="row margin-fixed margin-fix">
   <div class= "col-xs-12 max-auto text center">
     <div class="prefrence-title">
@@ -38,7 +39,6 @@
         </div><!-- end of flex item-->
       </div><!--end of btn-wrapper-->
     <%end%>
-
      <%= link_to diets_path(diet_name:"Dairy"), method: :post do %>
       <div class="btn-wrapper color-4-btn-wrapper flex-container decoration">
         <div class="flex-item">
@@ -50,10 +50,6 @@
           </div><!--end of flex item-->
         </div><!--end of btn-wrapper-->
       <%end %>
-
-        <%= link_to destroy_user_session_path, method: :delete do %>
-          <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-        <%end %>
   </div><!--end of col-xs-12-->
 </div><!--end of row-->
 
