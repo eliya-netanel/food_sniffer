@@ -6,9 +6,12 @@ class Diet < ApplicationRecord
   has_many :diet_ingredients
   has_many :ingredients, through: :diet_ingredients, dependent: :destroy
 
+  def self.find_template(name)
+    Diet.where(user_id: nil, name: name).first
+  end
 
   def self.new_from_template(name)
-    template_diet = Diet.where(user_id: nil, name: name).first
+    template_diet = find_template(name)
     diet = Diet.new
     diet.name = template_diet.name
     #The set ingredients of the template will be pushed to my diet.

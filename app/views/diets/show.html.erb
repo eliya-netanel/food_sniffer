@@ -18,7 +18,7 @@
             <%= category.capitalize %>
           </div><!-- end of flex item-->
           <div class="flex-item padding-right">
-            <i class="fas fa-chevron-right padding-right white-color arrow-dropdown" onclick="rotateArrow()"></i>
+            <i class="<%= 'fas fa-chevron-right padding-right white-color arrow-dropdown-#{category.parametize}' %>" onclick="rotateArrow('<%= category.parameterize %>')"></i>
           </div><!--end flex-item-->
         </div><!--iend ingredient button-->
        </a>
@@ -35,12 +35,12 @@
   </div><!-- end of col-->
 </div><!-- end of row-->
 <div class="flex-container-show-buttons footer">
-  <%= link_to new_diet_path, class:"link" do %>
+  <%= link_to new_diet_path, class:"link-2" do %>
   <p>Back</p>
   <div class="flex-item button-show">
   </div><!-- end flex-item-->
   <%end%>
-  <%= link_to new_scan_path, class:"link" do %>
+  <%= link_to diets_path(diet_name: @diet.name),class:"link", method: :post do %>
   <div class="flex-item button-show">
     <p>Scan Now</p>
   </div><!-- end flex-item-->
@@ -49,7 +49,6 @@
 
 <!-- This is how you write javascript in erb. Better not to. But you can. -->
 <script>
-
 function showIngredients(category) {
   // element = is the argument which is the a link
   // parentElement = is the parent element of the a href which is the div
@@ -62,11 +61,11 @@ function showIngredients(category) {
 }
 
 </script>
-<!-- <script>
-  function rotateArrow() {
-    const arrow = document.querySelector(".flex-continer-show");
+<script>
+  function rotateArrow(r) {
+    const arrow = document.querySelector(`.arrow-dropdown-${r}`);
     arrow.classList.toggle("arrow-dropdown-down")
     // arrow.style.transform = "rotate(90deg)";
   }
   // arrow.addEventListener('click', rotateArrow());
-</script> -->
+</script>
