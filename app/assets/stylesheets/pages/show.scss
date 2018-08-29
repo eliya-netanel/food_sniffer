@@ -198,12 +198,10 @@ a:active {
 
 
 .flex-container-show-buttons {
-
+  height: 165px;
   display: flex;
-  justify-content: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
-  height: 27%;
 }
 
 
@@ -301,6 +299,7 @@ p {
 .dropdown-content {
     display: none;
     // position: absolute;
+    box-sizing: content-box !important;
     background-color: #f1f1f1;
     min-height: 100%;
     min-width: 160px;
@@ -316,9 +315,6 @@ p {
     display: block;
     padding-bottom: 10px;
 }
-
-/* Change color of dropdown links on hover */
-
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}

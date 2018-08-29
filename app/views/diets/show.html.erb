@@ -32,17 +32,23 @@
       <%end%>
   </div><!-- end of col-->
 </div><!-- end of row-->
-<div class="flex-container-show-buttons footer">
-  <%= link_to new_diet_path, class:"link-2 green-btn" do %>
+
+
+<div class="flex-container-show-buttons">
+  <%= link_to "Back", new_diet_path, class:"link-2" %>
+  <%= link_to "Scan Now", diets_path(diet_name: @diet.name),class:"link", method: :post %>
+
+<!-- <div class="flex-container-show-buttons footer">
+  <%#= link_to new_diet_path, class:"link-2 green-btn" do %>
   <p>Back</p>
   <div class="flex-item button-show">
-  </div><!-- end flex-item-->
-  <%end%>
-  <%= link_to diets_path(diet_name: @diet.name),class:"link white-btn", method: :post do %>
+  </div>
+  <%#end%>
+  <%#= link_to diets_path(diet_name: @diet.name),class:"link white-btn", method: :post do %>
   <div class="flex-item button-show">
     <p>Scan Now</p>
-  </div><!-- end flex-item-->
-  <%end%>
+  </div>
+  <%#end%>-->
 </div><!--end flex-container-->
 
 <!-- This is how you write javascript in erb. Better not to. But you can. -->
