@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Scan my food - an app that helps you know if a food meets your dietary needs</title>
-    <%#= csrf_meIf the text exceeds 20 characters, the test passes. If not if fails.ta_tags %>
+    <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= favicon_link_tag 'favicon.ico'%>
@@ -15,7 +15,7 @@
     <%= javascript_pack_tag 'scanner' %>
     <%= javascript_pack_tag 'carousel' %>
     <%= javascript_pack_tag 'dropdown' %>
-    
+
   </head>
   <body class= "<%=params[:controller] %> <%= params[:action] %>" >
     <%#= render 'shared/flashes' %>
