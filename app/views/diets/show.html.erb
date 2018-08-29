@@ -4,7 +4,7 @@
       <h1>Ingredient Categories</h1>
     </div> <!-- end of prefrence-title-->
       <% @black_list_by_category.each do |category, ingredients| %>
-       <a class="decoration-show" a href="#" onclick="showIngredients('<%= category.parameterize %>');return false">
+       <a class="decoration-show dropdown"<%= category.parameterize %>>
         <div class="ingredient-categories-button flex-container-show">
       <!-- Iterating over all the categories.
       1)a href = Creating a link to the categories
