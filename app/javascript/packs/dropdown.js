@@ -1,5 +1,4 @@
-<!-- This is how you write javascript in erb. Better not to. But you can. -->
-<script>
+// This is how you write javascript in erb. Better not to. But you can.
 function showIngredients(category) {
   // element = is the argument which is the a link
   // parentElement = is the parent element of the a href which is the div
