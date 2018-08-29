@@ -4,8 +4,8 @@
       <h1>Ingredient Categories</h1>
     </div> <!-- end of prefrence-title-->
       <% @black_list_by_category.each do |category, ingredients| %>
-       <a class="decoration-show dropdown"<%= category.parameterize %>>
-        <div class="ingredient-categories-button flex-container-show">
+       <div class="decoration-show dropdown">
+        <div class="ingredient-categories-button flex-container-show dropbtn">
       <!-- Iterating over all the categories.
       1)a href = Creating a link to the categories
       2) onClick = Calling a function(see below) when you click on it.
@@ -18,19 +18,17 @@
             <%= category.capitalize %>
           </div><!-- end of flex item-->
           <div class="flex-item padding-right">
-            <i class="<%= 'fas fa-chevron-right padding-right white-color arrow-dropdown-#{category.parametize}' %>" onclick="rotateArrow('<%= category.parameterize %>')"></i>
+            <i class="fas fa-chevron-right padding-right white-color"></i>
           </div><!--end flex-item-->
         </div><!--iend ingredient button-->
-       </a>
-        <div class="wrapper-list">
-          <ul class="li-style ingredients-<%= category.parameterize %> collapsed">
+          <ul class="li-style dropdown-content collapsed">
             <% ingredients.each do |ingredient| %>
             <div class="list-div">
              <li><%= ingredient.name %></li>
             </div>
             <% end %>
           </ul>
-        </div><!-- end of wrapper-list-->
+       </div><!--end dropdown-->
       <%end%>
   </div><!-- end of col-->
 </div><!-- end of row-->
@@ -48,8 +46,8 @@
 </div><!--end flex-container-->
 
 <!-- This is how you write javascript in erb. Better not to. But you can. -->
-<script>
-function showIngredients(category) {
+<!-- <script> -->
+<!-- function showIngredients(category) {
   // element = is the argument which is the a link
   // parentElement = is the parent element of the a href which is the div
   // classList = you are getting access to the class of ul
@@ -59,13 +57,13 @@ function showIngredients(category) {
   document.querySelector(`ul.ingredients-${category}`).classList.toggle("padding-fix")
   // element.parentElement.querySelector("ul.ingredients").classList.toggle("collapsed")
 }
-
-</script>
-<script>
-  function rotateArrow(r) {
+ -->
+<!-- </script>
+<script> -->
+  <!-- function rotateArrow(r) {
     const arrow = document.querySelector(`.arrow-dropdown-${r}`);
     arrow.classList.toggle("arrow-dropdown-down")
     // arrow.style.transform = "rotate(90deg)";
   }
-  // arrow.addEventListener('click', rotateArrow());
-</script>
+  // arrow.addEventListener('click', rotateArrow()); -->
+<!-- </script> -->
