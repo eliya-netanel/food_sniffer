@@ -38,6 +38,8 @@ body.diets.show {
   width: 100vw;
   height: 8vh;
   background: #377f2d;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   }
 
 .vegetarian .ingredient-categories-button {
@@ -45,6 +47,8 @@ body.diets.show {
   height: 8vh;
   background: #76b552;
   font-size: 20px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .gluten-free .ingredient-categories-button {
@@ -52,6 +56,8 @@ body.diets.show {
   height: 8vh;
   background: #bfdd6b;
   font-size: 20px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .dairy .ingredient-categories-button {
@@ -59,6 +65,8 @@ body.diets.show {
   height: 8vh;
   background: #2f9d7f;
   font-size: 20px;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 ul {
   margin:0;
@@ -67,8 +75,35 @@ ul {
   padding-top: 15px !important;
   padding-bottom: 15px;
 }
-.arrow-dropdown {
+.arrow-dropdown-meat {
   transition: all 0.3s ease;
+    &.arrow-dropdown-down {
+    transform: rotate(90deg);
+  }
+}
+.arrow-dropdown-seafood {
+  transition: all 0.3s ease;
+    &.arrow-dropdown-down {
+    transform: rotate(90deg);
+  }
+}
+.arrow-dropdown-artificial-coloring {
+  transition: all 0.3s ease;
+    &.arrow-dropdown-down {
+    transform: rotate(90deg);
+  }
+}
+.arrow-dropdown-gluten {
+  transition: all 0.3s ease;
+    &.arrow-dropdown-down {
+    transform: rotate(90deg);
+  }
+}
+.arrow-dropdown-dairy {
+  transition: all 0.3s ease;
+    &.arrow-dropdown-down {
+    transform: rotate(90deg);
+  }
 }
 ul.ingredients-meat.collapsed {
   max-height: 0;
@@ -127,9 +162,7 @@ ul.ingredients-other-vegan-ingredients {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &.arrow-dropdown-down {
-    transform: rotate(90deg);
-  }
+
 }
 a:active {
   text-decoration: none;
@@ -166,33 +199,52 @@ a:active {
   display: flex;
   justify-content: center;
   justify-content: space-around;
-  position: relative;
+  flex-direction: column;
+  height: 27%;
 }
 
 
 .link {
-  text-decoration: none;
-  color: #326a2f;
-  font-weight: bolder;
-  width: 123px;
-  height: 57px;
-  background: #d8e8da99;
-  position: relative;
-  margin: 30px;
-  top: -15px;
-  padding: 16px;
-  font-size: 50px;
-  border-radius: 10px;
-  text-align: center;
-  // box-shadow: 0px 4px 0px 0px darken(#007335, 1%), 0px 0px 20px 0px #bbb;
 
-  transition: all 0.2s;
+  background-color: transparent;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 80%;
+  margin-left: 10%;
+
   p {
-    font-size: 18px;
+    font-size: 16px;
+    text-align: center;
 
   }
 }
+.link-2 {
 
+  background-color: #4CAF50;
+  border: 2px solid #4CAF50;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 80%;
+  bottom: 75px;
+  margin-left: 10%;
+  margin-top: 15%;
+p {
+  font-size: 16px;
+  text-align: center;
+
+  }
+}
 .link:active {
   background: #4CAF50;
   color: white;
@@ -221,7 +273,7 @@ a:active {
  position: absolute;
  left: 0;
  bottom: 0;
- height: 100px;
+ height: 27%;
  width: 100%;
 }
 

@@ -1,6 +1,13 @@
 class DietsController < ApplicationController
+
   def show
-    @diet = current_user.diet
+    if params[:id]
+      @diet = Diet.find(params[:id])
+    else
+      @diet = current_user.diet
+    end
+
+    @black_list_by_category = @diet.ingredients.group_by {|i| i.type_of }
 
     #getting the type_of from the ingredeints table
     # @black_list_by_category = {}
@@ -9,7 +16,6 @@ class DietsController < ApplicationController
     #   @black_list_by_category[ingredient.type_of] << ingredient
     # end
 
-    @black_list_by_category = @diet.ingredients.group_by {|i| i.type_of }
     # @black_list_by_category = @diet.ingredients.group_by(&:type_of)
 
 
@@ -29,8 +35,8 @@ class DietsController < ApplicationController
     # #The rest of the ingredients will follow that wasn't black listed.
     # @not_blacklisted = @ingredients - @black_list
     # @info =
+  end
 
-end
   def new
     @diet = Diet.new
   end
@@ -41,7 +47,7 @@ end
     diet = Diet.new_from_template(params[:diet_name])
     diet.user = current_user
     if diet.save
-      redirect_to user_diet_path
+      redirect_to new_scan_path
     else
       redirect_to new_diet_path
    end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to:  'diets#show' #new_user_session_path
 
   get :diet, to: 'diets#show', as: :user_diet
-  resources :diets, only: [:new, :create, :edit, :update]
+  resources :diets, only: [:new, :create, :edit, :update, :show]
   resources :scans, only: [:index, :new, :create, :show, :edit, :update] do
     collection do
       post :get_product
