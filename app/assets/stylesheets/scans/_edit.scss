@@ -39,7 +39,7 @@
 }
 .form-control {
     font-size: 15px;
-    color: white;
+    color: #808080;
     line-height: 10;
     display: block;
     width: 100%;
@@ -93,4 +93,67 @@ h6{
 .image3{
      width: 88%;
     margin-left: 20px;
+}
+
+#addedPopup {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50;
+
+}
+.pop-btn{
+
+     background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    display: center;
+    font-size: 16px;
+    margin: 31px 44px;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 80%;
+    bottom: 13px;
+    position: fixed;
+}
+.thx{
+    font-size: 36px;
+    font-family: "Nunito", "Nunito";
+    bottom: 182px;
+    position: fixed;
+}
+.icone2{
+    width: 70%;
+    margin-left: 60px;
+    margin-top: -140px;
+}
+.scans{
+  padding-top: 0px;
+}
+.special{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    display: center;
+    font-size: 16px;
+    margin: 21px -148px;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 80%;
+    bottom: 75px;
+    position: fixed;
 }

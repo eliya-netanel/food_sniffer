@@ -1,8 +1,36 @@
-<meta HTTP-EQUIV="REFRESH" content="0; url=<%=user_session_path %>">
-<!--
+<!-- <meta HTTP-EQUIV="REFRESH" content="0; url=<%=user_session_path %>">
+ --><!--
 <h1>Pages#home</h1>
 <h1>This is the loading page. You will be redirected in 4 seconds to the sign up page!</h1>
  -->
+<html>
+  <head>
+  </head>
+  <body>
 
+<!-- Slider container -->
+<div class="slider-container">
+  <!-- Slider list -->
+  <div class="spacing">
+  <ul class="slider-list">
 
+    <li class="slider-slide slider-slide-active">
+      <div><%=image_tag("choose.png", alt: "barcode-reader", class: "icone3")%></div>Choose a diet<p>Between vegetarian, vegan, gluten-free and lactose intolerant.</p></li>
+    <li class="slider-slide slider-slide-hidden"><div><%=image_tag("scanner.png", alt: "barcode-reader", class: "icone3")%></div>Scan an item<p>It will help us to check in the database what are the ingredient and compare them to your diet.</p></li>
+    <li class="slider-slide slider-slide-hidden"><div><%=image_tag("results.png", alt: "barcode-reader", class: "icone3")%></div>Get the results<p>You can have an clear answer if this item suits your diet or not. Now it's your turn!</p>
+    <%= link_to "Start", new_diet_path, class:"special" %>
+    </li>
+  </ul><!-- .end Slider list -->
 
+  <!-- Slider controls -->
+  <div class="slider-controlls">
+    <ul class="controlls-list">
+      <li><a href="#" class="js-slider-left slider-control control-left"><i class="fa fa-caret-left"></i></a></li>
+
+      <li><a href="#" class="js-slider-right slider-control control-right"><i class="fa fa-caret-right"></i></a></li>
+    </ul>
+  </div><!-- .end Slider controls -->
+</div><!-- .end Slider container -->
+
+  </body>
+</html>

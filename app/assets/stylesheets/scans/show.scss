@@ -1,7 +1,13 @@
-.image1{
+.part3{
     width: 100%;
     height: 40vh;
-  }
+    background:linear-gradient(to bottom left, #4be369, #50daa7);
+}
+.part1{
+  width: 100%;
+  height: 40vh;
+  background:linear-gradient(to bottom left, #f73347, #ff9e6f);
+}
 .part2{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 100%;
@@ -19,13 +25,26 @@
        color:#636262;
     }
     li{
-      color:#636262;
+      color:#c7c8c9;
+      text-decoration: yes;
+      padding-left:3px;
+    }
+    ul{
+      list-style-type: disc;
+      margin-left: 30px;
+      padding-top: 25px;
+      line-height: 1.9;
     }
 }
 .container {
     padding: 2px 16px;
     position: center;
+    h3{
+    font-size: 27px;
+    padding-left: 15px;
 }
+    }
+
 .col-xs-12 {
   padding-left: 0;
   padding-right: 0;
@@ -60,7 +79,7 @@
     padding: 18px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: center;
     font-size: 16px;
     margin: 31px 44px;
     cursor: pointer;
@@ -76,7 +95,7 @@
     padding: 18px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: center;
     font-size: 16px;
     margin: 31px 44px;
     cursor: pointer;
@@ -107,4 +126,26 @@
 }
 .new-color{
   background-color: #4CAF50;
+}
+.show{
+  padding-top:0px;
+}
+.icone1{
+    width: 58%;
+    margin-left: 89px;
+    margin-top: 22px;
+}
+.eat h1{
+  text-align:center;
+  font-size:23px;
+  padding-left:14px;
+}
+.ingredients-title h6{
+  width: 375px;
+  height: 6vh;
+  background-color:#d1d1d1;
+  color:#636262;
+  text-align:initial;
+  padding-right: 0px;
+  padding-left: 15px;
 }
