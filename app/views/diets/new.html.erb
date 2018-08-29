@@ -57,7 +57,7 @@
 
   </div><!--end of col-xs-12-->
 </div><!--end of row-->
-<div class="position-absolute"
-        <%= link_to destroy_user_session_path, method: :delete do %>
+<div class="position-absolute">
+        <%= link_to destroy_user_session_path, class:"fill", method: :delete do %>
           <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
         <%end %>
