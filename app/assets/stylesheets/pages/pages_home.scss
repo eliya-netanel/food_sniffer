@@ -29,10 +29,17 @@ ul {
   padding: 0;
   margin: 0;
 }
+.controlls-list {
+  display: flex;
+  justify-content: space-around;
+}
 .icone3{
      width: 60%;
      padding-bottom: 40px;
 
+}
+.start-btn {
+  margin-top: 70px;
 }
 .slider-container {
   padding: remy(16px);
@@ -74,8 +81,7 @@ ul {
 }
 
 .slider-controlls {
-  position: fixed;
-  margin-top: remy(16px);
+  margin-top: 60px;
   text-align: center;
   bottom: 15px;
 
@@ -104,8 +110,6 @@ ul {
 
   a {
     $color: white;
-
-    padding: 8px 85px;
     color: $color;
     text-decoration: none;
     transition: color .25s ease-in-out;

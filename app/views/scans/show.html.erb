@@ -1,8 +1,5 @@
  <div class="row margin-fix">
   <div class= "col-xs-12 max-auto text center">
-    <div class="prefrence-title scan new-color">
-      <h1>RESULTS</h1>
-    </div>
 
 
     <% if @scan.result  %>
@@ -13,9 +10,8 @@
         <div class="eat">
           <h1> You can eat that!</h1>
         </div>
-      </div>
-      <div class="card part2">
-        <div class="container">
+
+
           <h3><%= @scan.product_name %></h3>
       <div class="ingredients-title">
       <h6><strong> Ingredients </strong></h6>
@@ -25,15 +21,21 @@
               <li>
                 <%= ingredient %>
               </li>
+
             <% end %>
+
+          <%= link_to 'Scan again', new_scan_path, class:"back2", style:"text-center" %>
+
           </ul>
         </div>
-                <div class="return-btn text-center">
-        <%= link_to '', new_scan_path, class:"button", style:"text-center" %>
-        </div>
+
+      </div>
       </div>
       <!-- <div style="background-image: url(<%= image_path 'true.jpg' %>)"></div> -->
     <% elsif @scan.result.nil? %>
+            <div class="prefrence-title scan new-color">
+      <h1>RESULTS</h1>
+    </div>
         <div class="container nil">
           <h5><strong>We are sorry !</strong> </h5>
           <h6>Your item is not in our database. But you can help us by adding this item to the project.</h6>

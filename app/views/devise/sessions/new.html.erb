@@ -20,9 +20,12 @@
           <%= f.button :submit, "Log in", class:"login" %>
         </div>
       <% end %>
-      </div>
+      </div class="orwith">
       <h1>Or connect with</h1>
+    </div>
+    <div>
       <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: "loginBtn loginBtn--facebook"%>
+    </div>
     </div>
   </div>
 

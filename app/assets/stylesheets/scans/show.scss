@@ -1,7 +1,18 @@
 .part3{
     width: 100%;
-    height: 40vh;
-    background:linear-gradient(to bottom left, #4be369, #50daa7);
+    height: -webkit-fill-available;
+    background:#4CAF50;
+    h3{
+      text-align:center;
+
+   }
+    ul{
+      list-style-type: none;
+      margin-left: 9px;
+      padding-top: 25px;
+      line-height: 1.9;
+      text-align: center;
+    }
 }
 .part1{
   width: 100%;
@@ -34,6 +45,7 @@
       margin-left: 30px;
       padding-top: 25px;
       line-height: 1.9;
+      text-align: center;
     }
 }
 .container {
@@ -141,11 +153,24 @@
   padding-left:14px;
 }
 .ingredients-title h6{
-  width: 375px;
   height: 6vh;
-  background-color:#d1d1d1;
-  color:#636262;
-  text-align:initial;
-  padding-right: 0px;
-  padding-left: 15px;
+  color:white;
+  text-align:center;
+  padding-right:0px;
+      font-size: 25px;
+}
+.back2{
+      background-color: white;
+    border: 40px solid #4CAF50;
+    color: #4CAF50;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: -97px 1px;
+    cursor: pointer;
+    border-radius: 73px;
+    width: 104%;
+    margin-bottom: -50px;
 }
