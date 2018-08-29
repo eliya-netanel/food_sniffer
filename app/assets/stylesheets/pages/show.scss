@@ -321,3 +321,20 @@ p {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 // .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+.black-list-item .collapsed {
+  height: 0;
+}
+
+.black-list-item ul {
+  height: 200px;
+  transition: height 0.50s ease-in;
+  overflow: hidden;
+  color: black;
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  text-align: justify;
+  list-style: none;
+}
