@@ -1,10 +1,12 @@
- <div class="wrapper">
+ <div class="wrapper-show-scan">
   <div class="max-auto text center">
     <% if @scan.result  %>
       <!-- <h1 class="text-center result-page-result">You can eat!</h1> -->
       <!-- this product fits you dietery needs -->
       <div class="part3">
+        <div class="center-image-flex">
         <%= image_tag "true.png",class: "icone1" %>
+        </div>
         <div class="eat">
           <h1> You can eat that!</h1>
         </div>
@@ -43,7 +45,10 @@
 
     <% else %>
       <div class="part3 false-result">
+        <div class="center-image-flex">
         <%= image_tag "false.png",class: "icone1" %>
+        </div>
+
         <div class="eat">
           <h1> You can't eat that!</h1>
         </div>
