@@ -1,10 +1,13 @@
- <div class="row">
-  <div class= "col-xs-12 max-auto text center">
+ <div class="wrapper">
+  <div class="max-auto text center">
     <% if @scan.result  %>
       <!-- <h1 class="text-center result-page-result">You can eat!</h1> -->
       <!-- this product fits you dietery needs -->
       <div class="part3">
+        <div class="center-image-flex">
         <%= image_tag "true.png",class: "icone1" %>
+        </div>
+
         <div class="eat">
           <h1> You can eat that!</h1>
         </div>
@@ -28,18 +31,24 @@
       <div class="prefrence-title scan new-color">
         <h1>RESULTS</h1>
       </div>
-      <div class="container nil">
+      <div class="container container-show-404">
         <h5><strong>We are sorry !</strong> </h5>
         <h6>Your item is not in our database. But you can help us by adding this item to the project.</h6>
         <%= image_tag "nil.png",class: "image2" %>
-        <%= link_to 'Add item', edit_scan_path(@scan), class:"add", style:"text-center" %>
-        <%= link_to 'Back to scanner', new_scan_path, class:"again", style:"text-center" %>
+        <div class="sorry-btns sorry-add">
+          <%= link_to 'Add item', edit_scan_path(@scan), class:"add", style:"text-center" %>
+        </div>
+        <div class="sorry-btns sorry-again">
+          <%= link_to 'Back to scanner', new_scan_path, class:"again", style:"text-center" %>
+        </div>
       </div>
      <!--  </div> -->
 
     <% else %>
       <div class="part3 false-result">
-        <%= image_tag "false.png",class: "icone1" %>
+        <div class="center-image-flex">
+          <%= image_tag "false.png",class: "icone1" %>
+        </div>
         <div class="eat">
           <h1> You can't eat that!</h1>
         </div>
