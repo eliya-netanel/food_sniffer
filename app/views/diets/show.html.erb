@@ -13,14 +13,14 @@
       4)return false: we are disabling the link -->
           <div class="flex-item">
             <%= image_tag("#{category.parameterize}.png", alt: "#{category.parameterize}", class: "icon-show padding-left")%>
-          </div><!--end of flex item-->
-          <div class="flex-item white-color decoration-show">
+          <div class="white-color decoration-show">
             <%= category.capitalize %>
-          </div><!-- end of flex item-->
+          </div><!-- end of white color-->
+          </div><!-- end of flex-item-->
           <div class="flex-item padding-right">
             <i class="fas fa-chevron-right padding-right white-color"></i>
-          </div><!--end flex-item-->
-        </div><!--iend ingredient button-->
+        </div><!-- end of flex-box-->
+        </div><!--iend ingredient button flex box-->
         <ul class="collapsed">
           <% ingredients.each do |ingredient| %>
           <div class="list-div">
@@ -44,6 +44,7 @@
   <div class="flex-item button-show">
   </div>
   <%#end%>
+
   <%#= link_to diets_path(diet_name: @diet.name),class:"link white-btn", method: :post do %>
   <div class="flex-item button-show">
     <p>Scan Now</p>

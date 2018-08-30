@@ -92,6 +92,7 @@ background: #e1e1e1;
 .flex-container {
   display: flex;
   align-items: center;
+  justify-ccontent: space-between;
   h2 {
     margin: 0;
   }
@@ -100,7 +101,13 @@ background: #e1e1e1;
   margin: 0;
  }
 }
-
+.flex-item {
+  display: flex;
+  align-items: center;
+  > div {
+    padding-left: 48px;
+  }
+}
 .resize {
 width: 80px;
 height: auto;
@@ -178,16 +185,8 @@ padding-top: 6px;
   }
 }
 
-.fill {
-  color: white;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-    color: white;
-  }
-}
-.fill:hover,
-.fill:focus {
-  box-shadow: inset 0 0 0 2em var(--hover);
-}
+.flex-box-arrow {
+  display: flex;
+  justify-content: space-between;
 
+}
