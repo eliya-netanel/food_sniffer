@@ -26,13 +26,35 @@
 }
 
 
-
-a:hover {
+a:active, a:hover, a:visited, a:focus, a:link {
   text-decoration: none;
 }
-.green-btn:hover {
+.green-btn:hover, .green-btn:active,
+.green-btn:visited, .green-btn:focus,
+// .green-btn:link {
+  {
   color: white;
 }
-.white-btn:hover {
+.white-btn:hover, .white-btn:active,
+.white-btn:visited, .white-btn:focus,
+// .white-btn:link
+ {
   color: #4CAF50;
 }
+
+  .special{
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 18px 120px;
+      text-align: center;
+      text-decoration: none;
+      // display: center;
+      font-size: 16px;
+      // margin: 21px -148px;
+      cursor: pointer;
+      border-radius: 30px;
+      // width: 80%;
+      // bottom: 75px;
+      // position: fixed;
+  }

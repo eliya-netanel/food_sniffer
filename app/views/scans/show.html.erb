@@ -1,79 +1,62 @@
  <div class="row margin-fix">
   <div class= "col-xs-12 max-auto text center">
-
-
     <% if @scan.result  %>
       <!-- <h1 class="text-center result-page-result">You can eat!</h1> -->
       <!-- this product fits you dietery needs -->
       <div class="part3">
-      <%= image_tag "true.png",class: "icone1" %>
+        <%= image_tag "true.png",class: "icone1" %>
         <div class="eat">
           <h1> You can eat that!</h1>
         </div>
-
-
-          <h3><%= @scan.product_name %></h3>
-      <div class="ingredients-title">
-      <h6><strong> Ingredients </strong></h6>
-          </div>
-          <ul>
-            <%= @scan.ingredients.split(",").each do |ingredient|%>
-              <li>
-                <%= ingredient %>
-              </li>
-
-            <% end %>
-
-          <%= link_to 'Scan again', new_scan_path, class:"back2", style:"text-center" %>
-
-          </ul>
+        <h3><%= @scan.product_name %></h3>
+        <div class="ingredients-title">
+          <h6><strong> Ingredients </strong></h6>
         </div>
+        <ul>
+          <% @scan.ingredients.split(",").each do |ingredient|%>
+            <li>
+              <%= ingredient %>
+            </li>
+          <% end %>
+        </ul>
+        <%= link_to 'Scan again', new_scan_path, class:"back2", style:"text-center" %>
+      </div>
 
-      </div>
-      </div>
-      <!-- <div style="background-image: url(<%= image_path 'true.jpg' %>)"></div> -->
+<!--       </div>
+      </div> -->
     <% elsif @scan.result.nil? %>
-            <div class="prefrence-title scan new-color">
-      <h1>RESULTS</h1>
-    </div>
-        <div class="container nil">
-          <h5><strong>We are sorry !</strong> </h5>
-          <h6>Your item is not in our database. But you can help us by adding this item to the project.</h6>
-          <%= image_tag "nil.png",class: "image2" %>
-              <%= link_to 'Add item', edit_scan_path(@scan), class:"add", style:"text-center" %>
-              <%= link_to 'Back to scanner', new_scan_path, class:"again", style:"text-center" %>
-        </div>
+      <div class="prefrence-title scan new-color">
+        <h1>RESULTS</h1>
       </div>
+      <div class="container nil">
+        <h5><strong>We are sorry !</strong> </h5>
+        <h6>Your item is not in our database. But you can help us by adding this item to the project.</h6>
+        <%= image_tag "nil.png",class: "image2" %>
+        <%= link_to 'Add item', edit_scan_path(@scan), class:"add", style:"text-center" %>
+        <%= link_to 'Back to scanner', new_scan_path, class:"again", style:"text-center" %>
+      </div>
+     <!--  </div> -->
 
     <% else %>
-      <div class="part1">
-      <%= image_tag "false.png",class: "icone1" %>
+      <div class="part3 false-result">
+        <%= image_tag "false.png",class: "icone1" %>
         <div class="eat">
-          <h1>You can't eat that!</h1>
+          <h1> You can't eat that!</h1>
         </div>
-      </div>
-      <div class="card part2">
-        <div class="container">
-          <h3>@scan.product_name</h3>
-          <div class="ingredients-title">
-      <h6><strong> Ingredients </strong></h6>
-          </div>
-          <ul>
-            <%= @scan.ingredients.split(",").each do |ingredient|%>
-              <li>
-                <%= ingredient %>
-              </li>
-            <% end %>
-          </ul>
+        <h3><%= @scan.product_name %></h3>
+        <div class="ingredients-title">
+          <h6><strong> Ingredients </strong></h6>
         </div>
-        <div class="return-btn text-center">
-        <%= link_to '', new_scan_path, class:"button", style:"text-center" %>
-        </div>
+        <ul>
+          <% @scan.ingredients.split(",").each do |ingredient|%>
+            <li>
+              <%= ingredient %>
+            </li>
+          <% end %>
+        </ul>
+        <%= link_to 'Scan again', new_scan_path, class:"back2", style:"text-center" %>
       </div>
     <% end %>
-
-
-
     <!-- <div class="return-btn text-center">
       <%#= link_to 'Scan again', new_scan_path, class:"btn btn-primary", style:"text-center" %>
     </div> -->
