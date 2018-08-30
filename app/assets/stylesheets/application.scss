@@ -31,12 +31,17 @@ a:active, a:hover, a:visited, a:focus, a:link {
 }
 .green-btn:hover, .green-btn:active,
 .green-btn:visited, .green-btn:focus,
+.link-2:hover, .link-2:active,
+.link-2:visited, .link-2:focus,
+.white-btn:active, .link:active
 // .green-btn:link {
   {
-  color: white;
+  color: white !important;
 }
-.white-btn:hover, .white-btn:active,
-.white-btn:visited, .white-btn:focus,
+.white-btn:hover, .white-btn:visited,
+.white-btn:focus,
+.link:hover,
+.link:visited, .link:focus
 // .white-btn:link
  {
   color: #4CAF50;
