@@ -1,6 +1,6 @@
 .part3{
     width: 100%;
-    height: -webkit-fill-available;
+    // height: -webkit-fill-available;
     background:#4CAF50;
     h3{
       text-align:center;
@@ -9,10 +9,18 @@
     ul{
       list-style-type: none;
       margin-left: 9px;
-      padding-top: 25px;
+      // padding-top: 25px;
       line-height: 1.9em;
       text-align: center;
     }
+    position: relative;
+    padding-bottom: 110px;
+  &.false-result {
+    background-color: red;
+    .back2 {
+      color: red;
+    }
+  }
 }
 .part1{
   width: 100%;
@@ -153,24 +161,29 @@
   padding-left:14px;
 }
 .ingredients-title h6{
-  height: 6vh;
+  // height: 6vh;
   color:white;
   text-align:center;
   padding-right:0px;
-      font-size: 25px;
+  font-size: 25px;
+  margin: 15px;
 }
 .back2{
-      background-color: white;
-    border: 40px solid #4CAF50;
+    background-color: white;
+    // border: 40px solid #4CAF50;
     color: #4CAF50;
     padding: 18px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: -97px 1px;
+    // margin: -97px 1px;
     cursor: pointer;
     border-radius: 73px;
-    width: 104%;
-    margin-bottom: -50px;
+    width: 80%;
+    left: 10%;
+    // margin-bottom: -50px;
+    position: absolute;
+    bottom: 30px;
+    // margin-bottom
 }
