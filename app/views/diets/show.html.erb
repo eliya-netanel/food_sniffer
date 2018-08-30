@@ -1,5 +1,5 @@
 <div class="row margin-fix margin-fixed">
-  <div class= "col-xs-12 max-auto text center <%= @diet.name.downcase %>">
+  <div class= "max-auto text center <%= @diet.name.downcase %>">
     <div class="title-show">
       <h1>Ingredient Categories</h1>
     </div> <!-- end of prefrence-title-->
@@ -51,6 +51,11 @@
   </div>
   <%#end%>-->
 </div><!--end flex-container-->
+<div class="position-absolute">
+  <%= link_to destroy_user_session_path, class:"fill", method: :delete do %>
+    <i class="fa fa-sign-out-alt"></i>
+  <%end %>
+</div>
 
 <!-- This is how you write javascript in erb. Better not to. But you can. -->
 <!-- <script> -->
