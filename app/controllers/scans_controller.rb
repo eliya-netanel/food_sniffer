@@ -26,7 +26,7 @@ class ScansController < ApplicationController
     #if the product exists in DB:
     if product_info
       scan.product_name = product_info[:name]
-      scan.ingredients = product_info[:ingredients]#.lowercase #make sure if ok
+      scan.ingredients = product_info[:ingredients] #.lowercase #make sure if ok
       result = check_product(product_info[:ingredients])
       scan.result = result
     #if doesnt exist in DB:

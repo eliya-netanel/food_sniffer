@@ -24,7 +24,7 @@
 
 <!--       </div>
       </div> -->
-    <% elsif @scan.result.nil? %>
+    <% elsif @scan.result.nil? || @scan.ingredients.nil? %>
       <div class="prefrence-title scan new-color">
         <h1>RESULTS</h1>
       </div>
