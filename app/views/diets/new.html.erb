@@ -4,69 +4,89 @@
     <div class="prefrence-title">
       <h1>MY DIET</h1>
     </div><!--end of prefrence title-->
-
-    <%= link_to diets_path(diet_name:"Vegan"), method: :post do %>
-      <div class="btn-wrapper color-1-btn-wrapper flex-container decoration">
-        <div class="flex-item">
-          <%=image_tag("vegan.png", alt: "vegan", class: "resize padding-bottom-10")%>
-        </div><!--end of flex item-->
-        <div class="flex-item">
-          <h2 class="font-weight-600">Vegan</h2>
-         <p class="btn-margin">Products without a trace of animal or animal products.</p>
-       </div><!--end of flex item-->
-      </div><!--end of btn-wrapper-->
-      <% end %>
-      <div class="information-positioning-1">
-        <%= link_to image_tag("information.png", alt: "information", class: "information-icon"), diet_path(id: Diet.find_template("Vegan")) %>
-      </div>
-
-      <%= link_to diets_path(diet_name:"Vegetarian"), method: :post do %>
-      <div class="btn-wrapper color-2-btn-wrapper flex-container decoration">
-        <div class="flex-item">
-          <%= image_tag("vegetarian.png", alt: "vegetarian", class: "resize padding-top-6")%>
-        </div><!--end of flex item-->
-        <div class="flex-item">
-          <h2 class="font-weight-600">Vegetarian</h2>
-          <p class="btn-margin">Products without a trace of meat and/or fish.</p>
-        </div><!-- end of flex item-->
-      </div><!--end of btn-wrapper-->
-      <%end%>
-       <div class="information-positioning-2">
-        <%= link_to image_tag("information.png", alt: "information", class: "information-icon"), diet_path(id: Diet.find_template("Vegetarian")) %>
-       </div>
-
-      <%= link_to diets_path(diet_name:"Gluten-Free"), method: :post do %>
-      <div class="btn-wrapper color-3-btn-wrapper flex-container decoration">
-        <div class="flex-item">
-          <%= image_tag("gluten.png", alt: "gluten", class: "resize padding-bottom-4")%>
-        </div><!-- end of flex item-->
-        <div class="flex-item">
-         <h2 class="font-weight-600">Gluten-Free</h2>
-          <p class="btn-margin">Products without a trace of wheat.</p>
-        </div><!-- end of flex item-->
-      </div><!--end of btn-wrapper-->
-      <% end %>
-       <div class="information-positioning-3">
-        <%= link_to image_tag("information.png", alt: "information", class: "information-icon"), diet_path(id: Diet.find_template("Gluten-Free")) %>
-      </div>
-       <%= link_to diets_path(diet_name:"Dairy"), method: :post do %>
-      <div class="btn-wrapper color-4-btn-wrapper flex-container decoration">
-        <div class="flex-item">
-          <%= image_tag("customize.png", alt: "customize", class: "resize padding-bottom-3 ")%>
-        </div><!--end of flex item-->
+    <div class="card-wrapper">
+      <%= link_to diets_path(diet_name:"Vegan"), method: :post do %>
+        <div class="btn-wrapper color-1-btn-wrapper flex-container decoration">
           <div class="flex-item">
-            <h2 class="font-weight-600">Lactose-Intolerant</h2>
-            <p class="btn-margin">Products without a trace of dairy</p>
+            <%=image_tag("vegan.png", alt: "vegan", class: "resize padding-bottom-10")%>
           </div><!--end of flex item-->
+          <div class="flex-item">
+            <h2 class="font-weight-600">Vegan</h2>
+           <p class="btn-margin">Products without a trace of animal or animal products.</p>
+         </div><!--end of flex item-->
         </div><!--end of btn-wrapper-->
         <% end %>
-         <div class="information-positioning-4">
-        <%= link_to image_tag("information.png", alt: "information", class: "information-icon"), diet_path(id: Diet.find_template("Dairy")) %>
+        <div class="information-positioning-1">
+          <%= link_to diet_path(id: Diet.find_template("Vegan")) do %>
+            <i class="fas fa-info"></i>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+        <%= link_to diets_path(diet_name:"Vegetarian"), method: :post do %>
+        <div class="btn-wrapper color-2-btn-wrapper flex-container decoration">
+          <div class="flex-item">
+            <%= image_tag("vegetarian.png", alt: "vegetarian", class: "resize padding-top-6")%>
+          </div><!--end of flex item-->
+          <div class="flex-item">
+            <h2 class="font-weight-600">Vegetarian</h2>
+            <p class="btn-margin">Products without a trace of meat and/or fish.</p>
+          </div><!-- end of flex item-->
+        </div><!--end of btn-wrapper-->
+        <%end%>
+         <div class="information-positioning-1">
+          <%= link_to diet_path(id: Diet.find_template("Vegan")) do %>
+            <i class="fas fa-info"></i>
+          <% end %>
+         </div>
+       </div>
+
+      <div class="card-wrapper">
+        <%= link_to diets_path(diet_name:"Gluten-Free"), method: :post do %>
+        <div class="btn-wrapper color-3-btn-wrapper flex-container decoration">
+          <div class="flex-item">
+            <%= image_tag("glute.png", alt: "gluten", class: "resize padding-bottom-4")%>
+          </div><!-- end of flex item-->
+          <div class="flex-item">
+           <h2 class="font-weight-600">Gluten-Free</h2>
+            <p class="btn-margin">Products without a trace of wheat.</p>
+          </div><!-- end of flex item-->
+        </div><!--end of btn-wrapper-->
+        <% end %>
+         <div class="information-positioning-1">
+          <%= link_to diet_path(id: Diet.find_template("Vegan")) do %>
+            <i class="fas fa-info"></i>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="card-wrapper">
+         <%= link_to diets_path(diet_name:"Dairy"), method: :post do %>
+          <div class="btn-wrapper color-4-btn-wrapper flex-container decoration">
+            <div class="flex-item">
+              <%= image_tag("lactose.png", alt: "customize", class: "resize padding-bottom-3 ")%>
+            </div><!--end of flex item-->
+              <div class="flex-item">
+                <h2 class="font-weight-600">Lactose-Intolerant</h2>
+                <p class="btn-margin">Products without a trace of dairy</p>
+              </div><!--end of flex item-->
+            </div><!--end of btn-wrapper-->
+            <% end %>
+             <div class="information-positioning-1">
+            <%= link_to diet_path(id: Diet.find_template("Vegan")) do %>
+              <i class="fas fa-info"></i>
+            <% end %>
+          </div>
         </div>
 
   </div><!--end of col-xs-12-->
 </div><!--end of row-->
 <div class="position-absolute">
-        <%= link_to destroy_user_session_path, class:"fill", method: :delete do %>
-          <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
-        <%end %>
+  <%= link_to destroy_user_session_path, class:"fill", method: :delete do %>
+    <i class="fa fa-sign-out-alt"></i>
+  <%end %>
+</div>
+
+<!-- <i class="far fa-sign-out-alt"></i> -->
+
